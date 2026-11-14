@@ -373,16 +373,15 @@ var COMPRAS = [[11328.1,"Nélio Bastos","Porto"],[11360.0,"Zacarias Carvalho","I
       .then(function(id){ if (typeof id === "string") webinarId = id; })
       .catch(function(){ console.error("Erro ao registrar a entrada no webinar."); });  // sem os dados da pessoa no console
   }
-  // "ainda estou aqui": a cada 30 s com o vídeo tocando, e ao sair ou esconder a aba
-  function sinal(saindo){
+  // "ainda estou aqui": a cada 30 s, e ao sair ou esconder a aba
+  function sinal(){
     if (!webinarId) return;
-    if (!saindo && video && !usandoRelogio && video.paused) return;
     try { rpc("webinar_sinal", { p_id: webinarId, p_segundos: Math.max(0, Math.floor(agora())) }, true).catch(function(){}); } catch(e){}
   }
   function iniciarSinal(){
-    setInterval(function(){ sinal(false); }, 30000);
-    addEventListener("pagehide", function(){ sinal(true); });
-    document.addEventListener("visibilitychange", function(){ if (document.visibilityState === "hidden") sinal(true); });
+    setInterval(sinal, 30000);
+    addEventListener("pagehide", sinal);
+    document.addEventListener("visibilitychange", function(){ if (document.visibilityState === "hidden") sinal(); });
   }
 
   var salvo = lerSalvo();
