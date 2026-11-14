@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>[AO VIVO 🔴] 21 mensagens prontas com Caroline Lemos</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     COLE AQUI O SCRIPT DO PIXEL (Meta, Google, TikTok...)
+     ============================================================ -->
+
+<!-- ============================================================
+     COLE AQUI O SCRIPT DE UTM (Utmify ou outro)
+     ============================================================ -->
+
+<style>
+:root{
+  --fundo:#F7F8FA; --card:#FFFFFF; --linha:#ECEEF2; --cinza-tab:#E9EAEE;
+  --texto:#1C1C1E; --texto-2:#6B7079; --texto-3:#9AA0A8;
+  --verde:#30BB40; --verde-2:#28A437; --vermelho:#E11D2E; --preto:#111111;
+  --sombra:0 2px 14px rgba(20,24,40,.08);
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--fundo);color:var(--texto);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+button,input{font:inherit}
+.oculto{display:none!important}
+
+/* ---------- selos de segurança ---------- */
+.selos{display:flex;justify-content:center;gap:32px}
+.selos span{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:700;text-transform:uppercase;color:#9AA0A8;letter-spacing:.02em}
+.selos svg{width:14px;height:14px;color:var(--verde)}
+
+/* ---------- tela de entrada ---------- */
+.entrada{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 16px}
+.entrada-card{width:100%;max-width:590px;background:var(--card);border-radius:12px;box-shadow:var(--sombra);padding:40px}
+.vagas{position:relative;height:32px;background:#D9D9D9;border:1px solid rgba(2,2,2,.33);border-radius:37px;overflow:hidden;margin-bottom:20px}
+.vagas-barra{height:24px;margin:3px 5px;border-radius:61px;background:red;color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;width:90%;transition:width 1.2s ease-in-out;white-space:nowrap}
+.entrada h1{font-size:36px;line-height:48px;font-weight:500;margin:0 0 28px;letter-spacing:-.01em}
+.campo{display:flex;flex-direction:column;gap:6px;margin-bottom:22px}
+.campo label{font-size:14px;font-weight:500}
+.campo input{height:42px;border:1px solid #E2E4E9;border-radius:6px;padding:0 12px;font-size:16px;background:transparent;color:var(--texto);outline:none;box-shadow:0 1px 2px rgba(0,0,0,.04);width:100%}
+.campo input:focus{border-color:#B9BEC7;box-shadow:0 0 0 1px #B9BEC7}
+.campo input::placeholder{color:#8B9099}
+.campo.erro input{border-color:var(--vermelho)}
+.campo .msg-erro{display:none;color:var(--vermelho);font-size:12px}
+.campo.erro .msg-erro{display:block}
+.fone{display:flex}
+.fone .ddi{display:flex;align-items:center;gap:6px;padding:0 12px;border:1px solid #E2E4E9;border-right:0;border-radius:8px 0 0 8px;height:42px;font-size:14px;color:var(--texto-2);flex:none}
+.fone .ddi i{display:block;width:24px;height:16px;border-radius:2px;background:#009B3A;position:relative;overflow:hidden}
+.fone .ddi i::before{content:"";position:absolute;inset:3px 3px;background:#FEDF00;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.fone .ddi i::after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:#002776;left:8.5px;top:4.5px}
+.fone input{border-radius:0 8px 8px 0}
+.assistir{width:100%;min-height:48px;margin-top:10px;border:0;border-radius:6px;background:var(--verde);color:#fff;font-size:18px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.assistir:hover{background:var(--verde-2)}
+.assistir svg{width:18px;height:18px}
+.entrada .selos{margin-top:24px}
+.aviso-dados{margin:10px 0 0;font-size:12px;line-height:1.4;color:#9AA0A8;text-align:center}
+
+/* ---------- sala ---------- */
+.sala{height:calc(100svh - 43px);padding:16px 32px;display:grid;grid-template-columns:minmax(0,1fr) 406px;gap:0 36px}
+.col-video{min-width:0;display:flex;flex-direction:column;min-height:0}
+.col-video header h2{font-size:30px;line-height:1.25;font-weight:600;margin:0 0 12px;padding:6px 0 12px}
+.player{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000;flex:none}
+.player-embed{position:absolute;inset:0}
+.player-embed > *{width:100%;height:100%}
+.video-vazio{position:absolute;inset:0;display:grid;place-items:center;color:#cfd3da;font-size:14px;text-align:center;padding:20px;background:#1b1d22}
+.selo-vivo{position:absolute;left:12px;top:12px;z-index:19;display:flex;pointer-events:none;box-shadow:0 1px 4px rgba(0,0,0,.16)}
+.selo-vivo span{height:35px;display:flex;align-items:center;justify-content:center;gap:6px;font-size:14px;font-weight:600;padding:0 14px}
+.selo-vivo .v{background:#DC2626;color:#fff;border-radius:3px 0 0 3px;min-width:112px}
+.selo-vivo .v i{width:7px;height:7px;border-radius:50%;background:#fff;animation:pisca 1.3s infinite}
+.selo-vivo .p{background:#fff;color:var(--texto);border-radius:0 3px 3px 0;min-width:112px;font-variant-numeric:tabular-nums}
+.selo-vivo svg{width:16px;height:16px}
+@keyframes pisca{50%{opacity:.25}}
+.oferta-video{display:none;margin-top:16px;background:var(--card);border-radius:12px;box-shadow:var(--sombra);padding:18px 22px;align-items:center;gap:18px}
+.oferta-video.on{display:flex;animation:surge .5s ease}
+.oferta-video b{display:block;font-size:17px}
+.oferta-video .sub{display:block;color:var(--texto-2);font-size:14px}
+.btn-verde{display:inline-flex;align-items:center;justify-content:center;background:var(--verde);color:#fff;font-weight:700;text-decoration:none;border-radius:8px;padding:14px 24px;font-size:16px;white-space:nowrap;animation:chama 2.2s ease-in-out infinite}
+.btn-verde:hover{background:var(--verde-2)}
+.oferta-video .btn-verde{margin-left:auto}
+@keyframes chama{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+@keyframes surge{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+.col-chat{display:flex;flex-direction:column;min-height:0;height:calc(100% - 4px)}
+.abas{height:42px;flex:none;display:grid;grid-template-columns:repeat(var(--n,1),1fr);background:var(--cinza-tab);border-radius:8px;padding:4px}
+.abas button{border:0;background:transparent;border-radius:6px;font-size:14px;font-weight:500;color:var(--texto-2);cursor:pointer;position:relative}
+.abas button.ativa{background:#fff;color:var(--texto);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.abas .ponto{position:absolute;top:7px;right:12px;width:7px;height:7px;border-radius:50%;background:var(--vermelho);animation:pisca 1.3s infinite}
+.painel{flex:1;min-height:0;margin-top:8px;background:var(--card);border-radius:12px;box-shadow:var(--sombra);overflow:hidden;position:relative;display:flex;flex-direction:column}
+.aba-conteudo{position:absolute;inset:0;display:none;flex-direction:column}
+.aba-conteudo.ativa{display:flex}
+.fixado{display:none;margin:10px 10px 0;border:1px solid #DDEFE0;background:#F3FBF4;border-radius:10px;padding:10px 12px;align-items:center;gap:10px;font-size:13px;line-height:1.35}
+.fixado.on{display:flex;animation:surge .4s ease}
+.fixado b{display:block;font-size:13px}
+.fixado a{margin-left:auto;flex:none;background:var(--verde);color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:9px 12px;border-radius:7px}
+.lista{flex:1;min-height:0;overflow-y:auto;padding:8px 8px 8px 12px;overscroll-behavior:contain}
+.msg{display:flex;gap:10px;padding:7px 4px;animation:entra .22s ease}
+@keyframes entra{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.msg .av{width:32px;height:32px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:13px;font-weight:600;color:#fff}
+.msg .corpo{min-width:0;font-size:14px;line-height:1.4;word-wrap:break-word}
+.msg .quem{font-weight:600;font-size:13px}
+.msg .cid{color:var(--texto-3);font-size:12px}
+.msg .txt{display:block;color:#33363c}
+.msg.eu .quem{color:var(--verde-2)}
+.msg.eu .selo-eu{font-size:10px;font-weight:700;background:#E6F6E8;color:var(--verde-2);padding:1px 6px;border-radius:4px;margin-left:5px;vertical-align:1px}
+.novas{position:absolute;left:50%;transform:translateX(-50%);bottom:76px;display:none;background:var(--preto);color:#fff;border:0;border-radius:20px;padding:7px 14px;font-size:12px;font-weight:600;cursor:pointer;z-index:3;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+.novas.on{display:block}
+.envio{flex:none;height:64px;border-top:1px solid var(--linha);background:#fff;display:flex;align-items:center;gap:4px;padding:0 10px 0 16px;position:relative}
+.envio input{flex:1;min-width:0;height:100%;border:0;outline:none;background:transparent;font-size:14px;color:var(--texto)}
+.envio input::placeholder{color:var(--texto-3)}
+.icone{border:0;background:transparent;color:#9AA0A8;cursor:pointer;padding:6px;display:grid;place-items:center}
+.icone svg{width:20px;height:20px}
+.enviar{width:34px;height:34px;flex:none;border-radius:50%;border:0;background:var(--preto);color:#fff;display:grid;place-items:center;cursor:pointer}
+.enviar:disabled{opacity:.4}
+.enviar svg{width:16px;height:16px}
+.emojis{position:absolute;right:10px;bottom:68px;background:#fff;border:1px solid var(--linha);border-radius:10px;box-shadow:var(--sombra);padding:6px;display:none;gap:2px}
+.emojis.on{display:flex}
+.emojis button{border:0;background:transparent;font-size:20px;padding:4px 5px;border-radius:6px;cursor:pointer}
+.emojis button:hover{background:var(--fundo)}
+.oferta-aba{padding:22px;overflow-y:auto}
+.oferta-aba h3{margin:0 0 8px;font-size:17px}
+.oferta-aba p{margin:0 0 16px;color:var(--texto-2);font-size:14px;line-height:1.55}
+.oferta-aba .preco{font-size:14px;color:var(--texto-2);margin-bottom:4px}
+.oferta-aba .preco s{color:var(--texto-3)}
+.oferta-aba .valor{font-size:34px;font-weight:800;margin:0 0 4px}
+.oferta-aba .valor small{font-size:15px;font-weight:600;color:var(--texto-2)}
+.oferta-aba ul{margin:14px 0 20px;padding:0;list-style:none;font-size:14px;line-height:1.5}
+.oferta-aba li{padding:6px 0 6px 24px;position:relative;border-bottom:1px solid var(--linha)}
+.oferta-aba li::before{content:"";position:absolute;left:2px;top:12px;width:12px;height:7px;border-left:2px solid var(--verde);border-bottom:2px solid var(--verde);transform:rotate(-45deg)}
+.oferta-aba .btn-verde{width:100%;font-size:17px;padding:16px}
+.rodape{height:43px;display:flex;align-items:center;justify-content:flex-end;width:96%;margin:0 auto;border-top:1px solid #E3E5EA}
+
+/* ---------- calibração (?calibrar=1) ---------- */
+/* ---------- vagas ---------- */
+.vagas-box{margin-top:10px;max-width:340px}
+.vagas-box.grande{max-width:none;margin:0 0 14px}
+.vagas-linha{display:flex;align-items:center;gap:7px;font-size:13px;color:#B42318;font-weight:500}
+.vagas-linha strong{font-weight:800;font-variant-numeric:tabular-nums}
+.vagas-linha strong.bate{animation:bate .5s ease}
+@keyframes bate{40%{transform:scale(1.35)}}
+.pulso{width:8px;height:8px;border-radius:50%;background:var(--vermelho);flex:none;animation:pisca 1.3s infinite}
+.vagas-trilho{height:6px;border-radius:6px;background:#F3D9D7;margin-top:6px;overflow:hidden}
+.vagas-trilho i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#F04438,#B42318);border-radius:6px;transition:width .6s ease}
+.fixado strong{font-weight:800;color:#B42318}
+
+/* ---------- notificação de compra ---------- */
+.toast{position:fixed;left:24px;bottom:24px;z-index:40;width:340px;max-width:calc(100vw - 32px);background:#fff;border-radius:12px;box-shadow:0 10px 34px rgba(20,24,40,.18);padding:12px 14px;display:flex;align-items:center;gap:12px;
+  transform:translateY(130%);opacity:0;transition:transform .45s cubic-bezier(.2,.9,.3,1.2),opacity .3s ease;pointer-events:none}
+.toast.on{transform:none;opacity:1}
+.toast .ok{width:38px;height:38px;border-radius:50%;background:#E6F6E8;color:var(--verde-2);display:grid;place-items:center;flex:none}
+.toast .ok svg{width:20px;height:20px}
+.toast b{display:block;font-size:14px;line-height:1.3}
+.toast span{display:block;font-size:13px;color:var(--texto-2);line-height:1.35}
+.toast small{display:block;font-size:11px;color:var(--texto-3);margin-top:2px}
+
+.calib{position:fixed;left:12px;bottom:12px;z-index:60;background:rgba(0,0,0,.88);color:#fff;font:12px/1.5 ui-monospace,Consolas,monospace;padding:10px 12px;border-radius:10px;max-width:340px;display:none}
+.calib.on{display:block}
+.calib button,.calib input{font:inherit;background:#333;color:#fff;border:1px solid #555;border-radius:5px;padding:2px 7px;margin:2px 2px 0 0}
+.calib input{width:80px}
+
+@media (max-width:1180px){ .sala{grid-template-columns:minmax(0,1fr) 360px;gap:0 24px} .col-video header h2{font-size:24px} }
+@media (max-width:860px){
+  .entrada{justify-content:flex-start;padding:0}
+  .entrada-card{border-radius:0;box-shadow:none;padding:16px;max-width:none}
+  .entrada h1{font-size:24px;line-height:32px;margin-bottom:20px}
+  .sala{display:flex;flex-direction:column;height:100svh;padding:0;gap:0}
+  .col-video header{display:none}
+  .col-video{flex:none}
+  .player{border-radius:0}
+  .selo-vivo{left:8px;top:8px}
+  .selo-vivo span{height:22px;font-size:10px;min-width:0!important;padding:0 7px}
+  .selo-vivo svg{width:12px;height:12px}
+  .oferta-video{margin:0;border-radius:0;box-shadow:none;border-bottom:1px solid var(--linha);padding:10px 14px;gap:10px}
+  .oferta-video b{font-size:14px}.oferta-video .sub{display:none}
+  .oferta-video .btn-verde{padding:11px 14px;font-size:14px}
+  .oferta-video .vagas-box{margin-top:3px}
+  .oferta-video .vagas-trilho{display:none}
+  .oferta-video .vagas-linha{font-size:12px}
+  .oferta-video .sufixo{display:none}
+  .toast{left:8px;right:8px;top:auto;bottom:calc(72px + env(safe-area-inset-bottom));width:auto;max-width:none;transform:translateY(24px);padding:10px 12px}
+  .toast.on{transform:none}
+  .col-chat{flex:1;height:auto}
+  .abas{margin:8px 16px 0}
+  .painel{border-radius:0;box-shadow:none;margin-top:8px}
+  .envio{padding-bottom:env(safe-area-inset-bottom);height:calc(64px + env(safe-area-inset-bottom))}
+  .envio input{font-size:16px}
+  .rodape{display:none}
+}
+@media (prefers-reduced-motion:reduce){ *{animation:none!important} }
+</style>
+<!-- VTurb: preload e dns-prefetch do player -->
+<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+<link rel="preload" href="https://scripts.converteai.net/8fcb5660-b035-4202-a1f7-18e1456b93e1/players/6aeb6c7c653b823d4c83fc1c/v4/player.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+<link rel="preload" href="https://cdn.converteai.net/8fcb5660-b035-4202-a1f7-18e1456b93e1/6aeb6c3c856c26ccc368b44d/main.m3u8" as="fetch">
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://license.vturb.com">
+</head>
+<body>
+
+<!-- ======================= TELA DE ENTRADA ======================= -->
+<main class="entrada" id="entrada">
+  <form class="entrada-card" id="cadastro" novalidate>
+    <div class="vagas"><div class="vagas-barra" id="vagas">98% das vagas preenchidas...</div></div>
+    <h1>[AO VIVO 🔴] 21 mensagens prontas para as 7 situações em que quase todo homem trava</h1>
+    <div class="campo"><label for="fNome">Nome completo</label><input id="fNome" autocomplete="name" placeholder="Como podemos te chamar"><div class="msg-erro">Digite nome e sobrenome.</div></div>
+    <div class="campo"><label for="fEmail">E-mail</label><input id="fEmail" type="email" inputmode="email" autocomplete="email" placeholder="Seu melhor e-mail"><div class="msg-erro">Digite um e-mail válido.</div></div>
+    <div class="campo"><label for="fZap">WhatsApp</label><div class="fone"><span class="ddi"><i></i>+55</span><input id="fZap" type="tel" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000"></div><div class="msg-erro">Digite o WhatsApp com DDD.</div></div>
+    <div class="campo"><label for="fCidade">Cidade</label><input id="fCidade" autocomplete="address-level2" placeholder="De onde você está assistindo"><div class="msg-erro">Digite sua cidade.</div></div>
+    <button class="assistir" type="submit">Assistir Transmissão <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    <p class="aviso-dados">Ao continuar, você concorda em receber contato por e-mail e WhatsApp.</p>
+  </form>
+  <div class="selos">
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Site seguro</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Privacidade protegida</span>
+  </div>
+</main>
+
+<!-- ======================= SALA ======================= -->
+<div class="oculto" id="salaWrap">
+  <section class="sala">
+    <div class="col-video">
+      <header><h2>[AO VIVO 🔴] 21 mensagens prontas para as 7 situações em que quase todo homem trava</h2></header>
+      <div class="player">
+        <div class="player-embed" id="video">
+          <!-- VSL do VTurb -->
+          <vturb-smartplayer id="vid-6aeb6c7c653b823d4c83fc1c" style="display: block; margin: 0 auto; width: 100%; "><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 56.25% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/8fcb5660-b035-4202-a1f7-18e1456b93e1/players/6aeb6c7c653b823d4c83fc1c/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+        </div>
+        <div class="selo-vivo"><span class="v"><i></i>Ao Vivo</span><span class="p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg><b id="contador">4.812</b></span></div>
+      </div>
+      <div class="oferta-video" id="ofertaVideo">
+        <div class="oferta-txt"><b id="ctaTitulo">A Conselheira por R$ 97 por mês</b><span class="sub">Condição exclusiva para quem está ao vivo</span>
+          <div class="vagas-box"><div class="vagas-linha"><em class="pulso"></em><span>Restam <strong class="js-vagas">80</strong> vagas<span class="sufixo"> com esse valor</span></span></div><div class="vagas-trilho"><i class="js-vagas-barra"></i></div></div>
+        </div>
+        <a class="btn-verde" id="ctaBotao" href="#" target="_blank" rel="noopener">Quero minha vaga</a>
+      </div>
+    </div>
+
+    <aside class="col-chat">
+      <div class="abas" id="abas" role="tablist">
+        <button type="button" role="tab" class="ativa" data-aba="chat">Chat</button>
+        <button type="button" role="tab" data-aba="oferta" class="oculto" id="abaOferta">Oferta<span class="ponto"></span></button>
+      </div>
+      <div class="painel">
+        <div class="aba-conteudo ativa" data-conteudo="chat">
+          <div class="fixado" id="fixado"><div><b>Link liberado</b>Restam <strong class="js-vagas">80</strong> vagas com esse valor.</div><a id="fixadoBotao" href="#" target="_blank" rel="noopener">Entrar agora</a></div>
+          <div class="lista" id="lista" aria-live="polite"></div>
+          <button class="novas" id="novas" type="button">Novas mensagens ↓</button>
+          <form class="envio" id="form" autocomplete="off">
+            <input id="campoMsg" maxlength="200" placeholder="Envie uma mensagem..." aria-label="Envie uma mensagem">
+            <button class="icone" id="btnEmoji" type="button" aria-label="Emojis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5s1.3 2 3.5 2 3.5-2 3.5-2"/><circle cx="9" cy="10" r=".6" fill="currentColor"/><circle cx="15" cy="10" r=".6" fill="currentColor"/></svg></button>
+            <button class="enviar" id="enviar" type="submit" aria-label="Envie uma mensagem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></button>
+            <div class="emojis" id="emojis"><button type="button">👍</button><button type="button">❤️</button><button type="button">🙏</button><button type="button">👏</button><button type="button">🔥</button><button type="button">😂</button><button type="button">😢</button><button type="button">😮</button></div>
+          </form>
+        </div>
+        <div class="aba-conteudo oferta-aba" data-conteudo="oferta">
+          <h3>A Conselheira</h3>
+          <p>O diário estratégico que lembra do seu caso inteiro e está acordado às 3 da manhã.</p>
+          <div class="preco">De <s>R$ 497 por mês</s> por</div>
+          <div class="valor">R$ 97 <small>por mês</small></div>
+          <ul>
+            <li>Memória completa do seu caso, com dossiê de cada pessoa</li>
+            <li>Diagnóstico, estratégia, risco e sinal de parada</li>
+            <li>Modo crise com o que não fazer fixado na tela</li>
+            <li>Sessões ilimitadas, a qualquer hora</li>
+            <li>Preço garantido mesmo se cancelar e voltar</li>
+          </ul>
+          <div class="vagas-box grande"><div class="vagas-linha"><em class="pulso"></em><span>Restam <strong class="js-vagas">80</strong> vagas<span class="sufixo"> com esse valor</span></span></div><div class="vagas-trilho"><i class="js-vagas-barra"></i></div></div>
+          <a class="btn-verde" id="ofertaBotao" href="#" target="_blank" rel="noopener">Quero minha vaga</a>
+        </div>
+      </div>
+    </aside>
+  </section>
+  <footer class="rodape selos" style="justify-content:flex-end">
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Site seguro</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Privacidade protegida</span>
+  </footer>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+  <div><b id="toastNome"></b><span id="toastTxt"></span><small>agora mesmo</small></div>
+</div>
+
+<div class="calib" id="calib"></div>
+
+<script>
+/* ============================================================
+   CONFIGURAÇÃO · edite só este bloco
+   ============================================================ */
+var CONFIG = {
+  CTA_URL: "https://pay.hotmart.com/U108484363B?off=yhq6zqqr&checkoutMode=6", // link do botão do pitch
+  PITCH_DELAY: "187:58",        // minutos:segundos do vídeo em que a oferta aparece (aceita também "3:07:58")
+  CTA_TEXTO: "Quero minha vaga",                 // texto do botão
+  CTA_TITULO: "A Conselheira por R$ 97 por mês", // frase ao lado do botão, embaixo do vídeo
+  LEAD_SEGUNDOS: 4,             // quantos segundos ANTES da leitura o comentário sobe no chat
+  VAGAS_INICIAIS: 80,           // vagas disponíveis quando a oferta abre (cai 1 a cada compra)
+  VAGAS_MINIMO: 7,              // o contador nunca desce abaixo disso
+  NOTIFICACOES: true,           // false desliga as notificações "fulano garantiu a vaga"
+  TEXTO_COMPRA: "acabou de garantir a vaga na Conselheira",
+  // Supabase: grava cada entrada na tabela "webinar" e até onde a pessoa assistiu.
+  // A chave é a publicável (pública por definição); a tabela não se lê por ela.
+  SUPABASE_URL: "https://otquydduhefrtletozpc.supabase.co",
+  SUPABASE_KEY: "sb_publishable_97Nex9vbd7uHvsXMbB16Vg_QZYXZk-r"
+};
+/* ============================================================ */
+
+var COMENTARIOS = [[5.5,"Edmilson Miranda","Maceió","presente"],[8.5,"Joaquim Ferreira","Porto","boa noite, direto do trabalho"],[9.2,"Cleiton Tavares","São Luís","boa noite"],[9.2,"Aldo Fonseca","Sinop","boa noite, Carol"],[9.8,"Rafael Siqueira","Porto Alegre","cheguei agora"],[9.8,"Jorge Batista","Guarapari","boa noite pessoal"],[12.0,"Moacir Vieira","Caruaru","cheguei agora"],[12.2,"Augusto Gomes","Salvador","cheguei agora"],[18.2,"José Viana","Sinop","boa noite, Carol"],[18.5,"Jorge Medeiros","Salvador","boa noite, direto do trabalho"],[19.5,"Joelson Peixoto","Presidente Prudente","tô aqui"],[20.2,"Odair Batista","Niterói","presente"],[22.5,"Odair Cavalcanti","Linhares","boa noite, Carol"],[26.3,"Nestor Oliveira","Lages","boa noite pessoal"],[30.4,"Ubirajara Paiva","Brasília","boa noite, direto do trabalho"],[32.0,"Sidney Sampaio","Erechim","boa noite a todos"],[33.1,"Jorge Barbosa","Campos dos Goytacazes","tô aqui"],[36.3,"Jorge Monteiro","Uruguaiana","cheguei agora"],[38.1,"Délcio Campos","Luziânia","boa noite"],[40.0,"Firmino Pires","Macaé","tô aqui"],[41.3,"Ariel Santos","Londrina","boa noite"],[46.3,"Pietro Magalhães","Recife","boa noite, Carol"],[52.1,"Jailson Prado","Franca","áudio bom"],[52.6,"Alexandre Reis","Criciúma","tá ótimo"],[52.6,"Edilson Barbosa","Recife","baixo um pouco"],[52.8,"Edilson Bezerra","Serra","bom aqui"],[53.7,"Hildebrando Santos","Salvador","bom aqui"],[54.8,"Jeremias Cunha","Brasília","tá bom"],[55.5,"Moacir Moraes","Rio Verde","bom aqui"],[56.1,"Inácio Aguiar","Limeira","bom"],[58.5,"João Castro","Porto Velho","baixo um pouco"],[58.8,"Amaral Rocha","Marabá","tá bom"],[60.2,"Fernão Mendes","Santa Maria","perfeito aqui"],[62.5,"Ivo Barbosa","Guarulhos","baixo um pouco"],[63.4,"Washington Prado","Erechim","perfeito aqui"],[64.7,"Humberto Moreira","Umuarama","bom"],[66.9,"Roberval Medeiros","Rio Verde","bom aqui"],[68.2,"Gilvan Nascimento","Curitiba","bom aqui"],[68.4,"Edilson Machado","Parintins","bom"],[70.4,"Nicolas Martins","Brasília","bom!"],[71.8,"Adalberto Bastos","Juazeiro do Norte","áudio bom"],[73.7,"Augusto Dias","Chapecó","bom, Carol"],[80.7,"Cleiton Cunha","Salvador","bom"],[81.3,"Denilson Fernandes","Chapecó","tá bom"],[83.7,"Josimar Tavares","Caxias do Sul","bom, Carol"],[84.0,"Roberval Sampaio","Luziânia","bom!"],[89.1,"Adelino Dias","Mineiros","tá ótimo, Carol"],[94.4,"Baltazar Brito","Cuiabá","ouvindo perfeito"],[99.3,"Cícero Brito","Sobradinho","já começou? tô ouvindo tudo"],[115.5,"Durval Moura","Cachoeirinha","áudio tá baixo"],[126.8,"Eliseu Fonseca","Paranaguá","baixo aqui também"],[134.5,"Florêncio Machado","Arcos","aqui tá bom"],[146.3,"Miguel Tavares","Belém","muito bom"],[149.0,"Gilmar Pacheco","Tangará da Serra","tá travando um pouquinho"],[161.0,"Hamilton Aguiar","Jaraguá do Sul","é ao vivo mesmo?"],[210.0,"Diógenes Santana","Palmas","aqui tá normal"],[210.4,"Elton Sampaio","São Luís","agora tá bom"],[216.0,"Matias Sales","Joinville","agora tá bom"],[217.7,"Nilson Oliveira","Mogi das Cruzes","tudo certo"],[223.0,"Isaías Andrade","Santo Amaro","agora tá bom"],[223.5,"Roberval Prado","Arapiraca","agora tá bom"],[225.0,"Agnaldo Castro","Bagé","agora tá bom"],[226.0,"Domingos Prado","Lisboa","agora tá bom"],[226.6,"Ângelo Cardoso","Foz do Iguaçu","aqui tá normal"],[228.7,"Jeová Sampaio","Picuí","tudo certo por aqui"],[230.4,"Erasmo Aguiar","Rio de Janeiro","agora tá bom"],[232.2,"Durval Moura","Cachoeirinha","saí e entrei de novo, melhorou"],[233.8,"Egídio Queiroz","Vila Velha","tudo certo"],[280.1,"Nélio Pinto","Pelotas","sala cheia hoje"],[281.3,"Adalberto Cunha","Duque de Caxias","5 mil, caramba"],[283.1,"Wendel Queiroz","Bagé","boa noite gente"],[283.6,"Matheus Marques","Marabá","tô aqui desde o começo"],[287.8,"Erasmo Leite","Novo Hamburgo","boa noite gente"],[292.4,"Edmilson Leite","Ribeirão Preto","boa noite gente"],[293.2,"Pietro Barros","Jequié","uau"],[298.4,"Erasmo Rocha","Linhares","muita gente"],[298.6,"Otaviano Matos","Serra","sala cheia hoje"],[299.0,"Elton Gonçalves","Três Lagoas","muita gente"],[300.5,"Valdomiro Macedo","Petrópolis","uau"],[304.0,"Nilson Fonseca","João Pessoa","tô aqui desde o começo"],[305.1,"Hermes Lopes","Cuiabá","tô aqui desde o começo"],[309.7,"Valdemar Souza","Itumbiara","boa noite gente"],[332.3,"Ezequiel Mendes","Jaraguá do Sul","certíssima"],[413.1,"Lourival Sales","Piripiri","serve pra quem quer reconquistar a ex? terminou faz um mês"],[415.5,"Jeremias Peixoto","Duque de Caxias","pegou fundo"],[421.5,"Valdeci Cardoso","Guanambi","e pra quem tá só começando a conhecer alguém?"],[498.7,"Jackson Costa","Palmas","anotado"],[554.8,"Nilson Ribeiro","Chapecó","caderno cheio já"],[585.1,"Kauê Silva","Atibaia","caderno na mão já"],[605.4,"Agnaldo Carvalho","Florianópolis","que aula"],[623.2,"Leopoldo Santos","Ivaiporã","vim direto do trabalho"],[631.1,"Manoel Castro","Barra Mansa","Carol, vai ficar gravado?"],[650.0,"Haroldo Pereira","Presidente Prudente","tô colado"],[650.1,"Edinaldo Matos","Serra","vou ficar até o final"],[650.1,"Ezequiel Magalhães","Lages","fico até o fim"],[655.7,"Wilton Peixoto","Salvador","não vou sair"],[657.0,"Yuri Bezerra","Orlando","garantido"],[659.5,"Rafael Castro","Chapecó","não vou sair"],[660.3,"Nélio Xavier","São Paulo","tô colado"],[662.8,"Ariel Freitas","Boa Vista","garantido"],[664.6,"Jardel Vieira","Ipatinga","fico até o fim"],[666.8,"Amaral Lopes","Boston","garantido"],[668.8,"Yuri Soares","Juazeiro do Norte","tô colado"],[669.0,"Augusto Correia","São Paulo","vou ficar até o final"],[670.7,"Vicente Pinto","Feira de Santana","tô colado"],[673.8,"Jeremias Gonçalves","Caxias do Sul","não saio daqui"],[701.1,"Neto Cunha","Lagarto","bora, Carol"],[704.6,"Otacílio Siqueira","Itapeva","não saio daqui de jeito nenhum"],[713.2,"Pascoal Lima","São Lourenço","ansioso pra saber qual é a mensagem sem palavras"],[752.7,"Miguel Peixoto","Recife","anotado"],[807.3,"Benício Prado","Araçatuba","isso é muito real"],[893.7,"Davidson Torres","Imperatriz","que verdade"],[926.4,"Augusto Coelho","Poços de Caldas","real"],[958.0,"Edinaldo Peixoto","Jundiaí","tô junto"],[958.1,"Gilson Teixeira","Formosa","tô dentro"],[958.2,"Alexandre Medeiros","Santa Cruz do Sul","Carol, tô junto"],[958.8,"Erasmo Magalhães","Mossoró","tô junto"],[959.8,"Edinaldo Vieira","Rio de Janeiro","combinado até o final"],[960.2,"Elton Dias","Montes Claros","tô junto"],[960.6,"Joelson Gonçalves","Canoas","combinado!"],[962.2,"Tiago Matos","Macapá","combinado"],[964.2,"Benício Teixeira","Lages","combinado"],[964.7,"Hildebrando Machado","Fortaleza","combinado até o final"],[964.7,"Wellerson Dias","Ponta Grossa","combinado"],[965.1,"Edinaldo Santana","Londrina","Carol, tô junto"],[965.3,"Denilson Santos","Guarulhos","combinado, Carol"],[967.2,"Nilson Miranda","Umuarama","combinado até o final"],[968.6,"Lázaro Sampaio","Luziânia","combinado"],[969.4,"Davidson Santos","Rio Verde","tô junto"],[972.7,"Wilton Medeiros","Parnaíba","combinado!"],[975.0,"Inácio Fernandes","Goiânia","Carol, tô junto"],[979.5,"Amaral Ramos","Petrópolis","combinado!"],[980.1,"Elton Paiva","Vila Velha","Carol, tô junto"],[980.7,"Carlos Castro","Novo Hamburgo","combinado, Carol"],[981.6,"Wellerson Rocha","Niterói","combinadíssimo"],[981.9,"Nélio Cavalcanti","Uberlândia","combinado"],[982.5,"Joaquim Moreira","Mogi das Cruzes","combinadíssimo"],[983.8,"Luís Marques","Porto Velho","tô junto"],[985.7,"Jaime Freitas","Parnaíba","tô dentro"],[986.3,"Diego Vieira","Uberlândia","combinado. ela visualizou ontem e até agora nada"],[988.7,"Rafael Almeida","Várzea Grande","tô junto"],[989.0,"Erasmo Falcão","Petrolina","Carol, tô junto"],[992.2,"Jeremias Siqueira","Orlando","combinado"],[992.8,"Altair Almeida","Rio de Janeiro","tô colado"],[999.8,"Márcio Freitas","Feira de Santana","caderno aberto aqui"],[1011.9,"Leandro Freitas","Chapecó","combinado, Carol, tô dentro"],[1023.6,"Rodrigo Ferreira","Ananindeua","dá pra mandar mensagem depois de três semanas sem falar com ela?"],[1042.1,"Thiago Tavares","Maringá","assisto todo vídeo do canal"],[1049.6,"Edson Rezende","Caruaru","mandei textão no domingo e me arrependi na segunda"],[1074.5,"Egídio Santos","Londres","tô anotando tudo"],[1079.5,"Fábio Macedo","Sete Lagoas","fico até o final"],[1085.0,"Cristiano Rodrigues","Mossoró","combinado, até o final"],[1089.4,"Wesley Pinto","Aparecida de Goiânia","minha namorada pediu um tempo e eu não sei o que fazer com esse tempo"],[1104.8,"Renato Bastos","Joinville","cheguei agora, ainda dá tempo?"],[1114.3,"Cauê Almeida","Cariacica","isso é muito real"],[1172.8,"Wilton Correia","Ilhéus","boa, Carol"],[1259.4,"Giovani Rodrigues","Natal","isso aí"],[1289.1,"Juliano Xavier","Petrolina","meus amigos falaram três coisas diferentes e eu fiz as três"],[1308.1,"Anderson Almeida","Cascavel","sumi um mês porque vi num vídeo que funcionava. quando voltei ela já tava conversando com outro"],[1320.3,"Alexandre Cardoso","Três Lagoas","que verdade"],[1326.1,"Gustavo Castro","Blumenau","sou eu, Carol"],[1331.6,"Paulo Oliveira","Imperatriz","mandei bom dia, boa tarde, boa noite por duas semanas seguidas"],[1344.0,"Hugo Barbosa","Campina Grande","tem salvação?"],[1360.3,"Jardel Viana","Vitória da Conquista","que aula"],[1393.3,"Pietro Freitas","Itajaí","isso dói"],[1428.9,"Joaquim Bezerra","Olinda","eu fazia isso"],[1471.2,"Erasmo Xavier","Varginha","tô aqui ainda"],[1526.4,"Otoniel Mendes","Salvador","nunca tinha pensado assim"],[1615.4,"Erasmo Ribeiro","Araçatuba","caderno cheio já"],[1650.9,"Wilton Miranda","Volta Redonda","faz sentido demais"],[1692.9,"Davidson Andrade","Maceió","real"],[1775.7,"Haroldo Martins","Lisboa","verdade pura"],[1830.5,"Gilvan Pereira","Garanhuns","anotando"],[1896.3,"Isaac Medeiros","Camaçari","verdade"],[1949.9,"Cleiton Correia","Uruguaiana","faz sentido demais"],[2013.7,"Fagner Dias","Belo Horizonte","é isso"],[2048.0,"Ariel Gonçalves","Pelotas","sim demais"],[2048.7,"Benício Nascimento","Boston","sim, Carol"],[2049.0,"Jardel Pires","Ponta Grossa","sim demais"],[2049.8,"Edinaldo Miranda","Catalão","sim, Carol"],[2050.4,"Edinaldo Campos","Marília","sim demais"],[2050.5,"Ubirajara Pacheco","Fortaleza","sim"],[2050.7,"Júnior Gonçalves","Contagem","me encaixo"],[2051.9,"Jorge Correia","São Luís","sim demais"],[2052.7,"Ezequiel Cavalcanti","Chapecó","sim, Carol"],[2055.4,"Ezequiel Soares","Belo Horizonte","me encaixo total"],[2057.8,"Moacir Silva","Caruaru","sim!"],[2062.8,"Elton Tavares","Guarapari","me encaixo total"],[2063.1,"Cauê Souza","Sinop","sim"],[2063.9,"Wilton Lima","Criciúma","sim"],[2066.1,"Hildebrando Lima","Olinda","Carol, me encaixo"],[2066.4,"Vinícius Ribeiro","Londrina","sim. vivo exatamente nesse dilema entre insistir e me afastar"],[2067.0,"Moacir Correia","Apucarana","simmm"],[2068.7,"Rafael Souza","Campos dos Goytacazes","sim"],[2069.0,"Washington Nunes","Mossoró","sim!"],[2069.2,"Luís Santana","Divinópolis","sim, Carol"],[2069.6,"Giovani Rocha","Manaus","sim"],[2071.4,"Jaime Soares","Miami","me encaixo"],[2073.6,"Marcelo Lopes","Santarém","sim, ela esfriou do nada"],[2074.1,"Domingos Macedo","Fortaleza","sim!"],[2077.4,"Benício Araújo","Divinópolis","me encaixo total"],[2077.6,"Ângelo Queiroz","Caxias do Sul","Carol, me encaixo"],[2077.6,"Otaviano Almeida","Serra","sim demais"],[2078.7,"Wanderley Santana","Três Lagoas","simmm"],[2084.2,"Wellerson Moraes","Brasília","Carol, me encaixo"],[2084.7,"Ângelo Paiva","Uruguaiana","simmm"],[2085.5,"Alex Oliveira","Itajaí","sim. nunca tinha pensado que ficar olhando se ela tá online era vigiar"],[2086.3,"Sidney Guimarães","Garanhuns","sim!"],[2090.7,"Denilson Duarte","Formosa","sim"],[2102.1,"Sérgio Bezerra","Vitória da Conquista","sim"],[2106.4,"Bruno Rocha","Ribeirão Preto","sim!"],[2109.6,"Jefferson Guimarães","Macapá","sim, terminou faz dois meses"],[2114.6,"Douglas Farias","Piracicaba","serve pra quem é casado?"],[2123.5,"Simone Medeiros","Aracaju","tô assistindo pra entender o que meu ex pensava"],[2124.1,"Rafael Paiva","Santos","isso é muito real"],[2140.3,"Leonardo Leite","Teresina","sim"],[2142.3,"Caio Barbosa","Pelotas","sim, Carol"],[2144.4,"Robson Andrade","Governador Valadares","sim. mas ela pediu pra eu não procurar mais"],[2168.5,"Aníbal Campos","Presidente Prudente","caderno cheio já"],[2244.6,"Elizeu Fonseca","Florianópolis","boa, Carol"],[2303.2,"Aníbal Pires","Ilhéus","voltou aqui"],[2303.4,"Lázaro Magalhães","Guarulhos","agora sim"],[2304.2,"Wanderley Fonseca","Florianópolis","tô te vendo, Carol"],[2306.8,"Hermes Aguiar","Bauru","agora sim"],[2308.3,"Ângelo Nunes","Bauru","voltou"],[2311.2,"Giovani Moreira","Macaé","agora sim"],[2312.2,"Jaime Guimarães","Porto","tô te vendo, Carol"],[2313.7,"Francisco Marques","Campo Grande","voltou!"],[2316.4,"Américo Marques","Rondonópolis","tô te vendo, Carol"],[2320.1,"Fagner Tavares","Florianópolis","voltou!"],[2320.3,"Denilson Martins","Três Lagoas","tô te vendo, Carol"],[2320.9,"José Santana","Dourados","voltou!"],[2334.1,"Rafael Cavalcanti","Lages","exatamente"],[2380.2,"Valdomiro Monteiro","Petrópolis","certíssima"],[2441.0,"Giovani Miranda","Umuarama","sou eu"],[2487.2,"Alexandre Magalhães","Presidente Prudente","pegou fundo"],[2529.4,"Silvano Farias","Salvador","me identifiquei"],[2575.1,"Giovani Lima","Garanhuns","já"],[2575.2,"Jucelino Fonseca","Dourados","sim"],[2575.4,"Ezequiel Andrade","Sobral","sim, agora mesmo"],[2576.0,"Alexandre Almeida","Guarapari","sim"],[2576.9,"Nélio Ribeiro","Cabo Frio","sim, Carol"],[2577.3,"Joaquim Cavalcanti","Pelotas","toda vez"],[2577.5,"Edmilson Castro","Foz do Iguaçu","já"],[2578.9,"Joaquim Farias","Brasília","toda vez"],[2579.1,"Gilson Torres","Blumenau","sim, demais"],[2579.2,"Jaime Torres","Presidente Prudente","sim"],[2580.0,"Altair Sales","Franca","toda vez"],[2580.3,"Amaral Barros","Franca","já aconteceu"],[2581.2,"Joaquim Moura","Balneário Camboriú","sim, demais"],[2581.3,"Rafael Pires","Juazeiro","sim, Carol"],[2581.9,"Denilson Cunha","Sinop","já aconteceu"],[2582.2,"Zacarias Aguiar","Campo Grande","já aconteceu"],[2583.3,"Olavo Siqueira","Orlando","sim"],[2583.9,"Francisco Gomes","Camaçari","sim, Carol"],[2585.4,"Moacir Brito","Ceilândia","sim"],[2594.8,"Denilson Medeiros","Curitiba","já, várias vezes"],[2595.8,"Gilberto Rodrigues","Juiz de Fora","sim, agora mesmo"],[2599.1,"Ricardo Pacheco","Arapiraca","me perdi tentando. hoje nem me reconheço"],[2602.2,"Dalton Andrade","Guarapari","sim, agora mesmo"],[2603.0,"Rafael Medeiros","Novo Hamburgo","sim"],[2603.9,"Willian Pereira","Apucarana","sim, demais"],[2605.4,"José Rezende","Jaraguá do Sul","já, várias vezes"],[2608.3,"Rafael Reis","Erechim","sim, demais"],[2609.2,"Iago Siqueira","Uberlândia","já, várias vezes"],[2613.1,"Eduardo Cardoso","Santa Maria","não sabia que a Carol também tinha passado por isso"],[2634.8,"Murilo Gomes","Rio Verde","sim"],[2636.7,"Fernando Nunes","Ponta Grossa","sim demais"],[2640.3,"Ronaldo Marques","Parauapebas","onze anos de casamento e ela pediu pra dar um tempo"],[2649.1,"Silvio Cunha","Sobral","o pior é não saber se ela ainda gosta de mim"],[2654.0,"Daniel Gomes","Bauru","sim, demais"],[2656.2,"Adriano Lopes","Criciúma","um abraço, Carol"],[2666.5,"Matheus Queiroz","Fortaleza","que aula"],[2667.1,"Cleber Paiva","Divinópolis","tô assistindo escondido no carro pra ela não ver"],[2720.6,"Fernão Siqueira","Macaé","pegou fundo"],[2752.2,"Iago Ribeiro","Balneário Camboriú","sou eu"],[2799.9,"Haroldo Barros","Santa Maria","verdade"],[2834.3,"Tiago Fernandes","Sinop","eu fazia isso"],[2876.0,"Egídio Fonseca","Lauro de Freitas","me identifiquei"],[2909.0,"Matias Viana","Imperatriz","verdade"],[2957.7,"Wilton Viana","Petrolina","é isso"],[3038.1,"Alexandre Macedo","Anápolis","isso aí"],[3114.5,"André Moraes","Chapecó","verdade"],[3155.5,"Nicolas Nunes","Porto","certíssima"],[3214.8,"Joaquim Oliveira","Presidente Prudente","pesado isso"],[3299.1,"Gilvan Batista","Montes Claros","é isso"],[3358.7,"Amaral Ribeiro","Divinópolis","kkkk sou eu"],[3417.0,"Fernão Medeiros","Poços de Caldas","me identifiquei"],[3484.8,"Bernardo Moura","Itumbiara","sou eu"],[3525.8,"Edilson Xavier","Guarapari","tô anotando tudo"],[3602.9,"Milton Rezende","Marília","nossa"],[3652.0,"Milton Santana","Salvador","3"],[3652.1,"Matias Nunes","Natal","3 kkk"],[3652.1,"Aldo Leite","Londrina","2"],[3653.7,"Haroldo Brito","Mogi das Cruzes","2"],[3654.0,"Alexandre Fernandes","Santos","3"],[3655.2,"Ezequiel Araújo","Catalão","1"],[3656.0,"Iago Farias","Anápolis","1"],[3656.8,"Yuri Bastos","Guarapuava","3"],[3657.2,"Yuri Ribeiro","Ipatinga","2 e 3"],[3658.5,"Jeremias Marques","Dourados","3!"],[3658.8,"Alexandre Soares","Rondonópolis","2 e 3"],[3659.1,"Maximiliano Costa","Guarulhos","2 e 3"],[3659.8,"Vicente Nunes","Arapiraca","3!"],[3661.6,"Elizeu Gonçalves","Salvador","3 com certeza"],[3665.8,"Yuri Nunes","Luziânia","3 kkk"],[3666.2,"Otoniel Farias","Piracicaba","3 kkk"],[3668.3,"Josimar Leite","Imperatriz","2"],[3668.4,"Elton Silva","Rio Verde","2"],[3669.3,"Washington Alves","Marabá","2 e 3"],[3670.3,"Nicolas Rocha","Londrina","3"],[3672.1,"Ivan Pacheco","Boa Vista","3. já são dois dias"],[3672.8,"Ariel Souza","Juazeiro","1"],[3675.8,"Otávio Paiva","Volta Redonda","2, esfriou depois do segundo encontro"],[3682.8,"Jonas Coelho","Garanhuns","1. tô conhecendo uma menina da academia e travo toda vez"],[3683.3,"Jackson Pereira","Cariacica","3!"],[3683.3,"Zacarias Reis","Várzea Grande","2 e 3"],[3684.4,"Altair Santana","Cabo Frio","3 kkk"],[3688.2,"Rafael Rodrigues","Araçatuba","2"],[3688.5,"Carlos Ramos","Uruguaiana","3"],[3690.3,"Aníbal Medeiros","Bagé","2"],[3691.9,"Aníbal Cunha","Araçatuba","3"],[3692.9,"Iago Alves","Olinda","3 com certeza"],[3695.1,"Luciano Nunes","Toledo","2 e 3 ao mesmo tempo kkk"],[3695.7,"Edinaldo Teixeira","Palmas","2 e 3"],[3703.8,"Mateus Farias","Itabuna","3"],[3709.2,"Elias Vieira","Marabá","3"],[3711.0,"Kleber Prado","Franca","2"],[3713.1,"Nelson Rezende","Patos de Minas","3. ela visualiza e posta story logo depois"],[3734.0,"Jorge Soares","Guarulhos","me identifiquei"],[3793.9,"Ariel Matos","Belo Horizonte","real"],[3878.0,"Daniel Moraes","Itaberaba","sim, é exatamente assim que eu faço"],[3878.9,"Erasmo Andrade","Piracicaba","culpado kkk"],[3880.1,"Lázaro Lopes","Taubaté","é assim mesmo"],[3880.8,"Lindolfo Nascimento","Itajaí","é assim mesmo"],[3882.5,"Milton Lopes","Lisboa","é assim mesmo"],[3885.9,"Dalton Sales","Miami","eu faço isso"],[3886.9,"Wendel Costa","Linhares","culpado kkk"],[3889.0,"Nélio Siqueira","Porto Alegre","eu faço isso"],[3889.6,"Américo Pinto","Juiz de Fora","eu faço isso"],[3890.3,"Odair Tavares","Itajaí","eu faço isso"],[3891.8,"Fernão Batista","Canoas","é assim mesmo"],[3950.7,"Nilson Siqueira","Volta Redonda","verdade"],[4019.0,"Davidson Vieira","Jundiaí","nunca tinha pensado assim"],[4076.5,"Fagner Peixoto","Balneário Camboriú","verdade"],[4131.1,"Claudemir Pereira","Belo Horizonte","boa, Carol"],[4220.4,"Armando Correia","Maringá","boa, Carol"],[4266.6,"Ezequiel Falcão","Rondonópolis","isso dói"],[4320.1,"Nilson Batista","Ipatinga","3"],[4320.2,"Carlos Tavares","Salvador","1"],[4320.4,"Jeremias Cavalcanti","Belo Horizonte","1 kkk"],[4321.4,"Augusto Vieira","Divinópolis","a 2"],[4321.5,"Humberto Aguiar","Mossoró","1"],[4321.5,"Yuri Gomes","Niterói","já mandei a 1"],[4321.7,"Amaral Viana","Ipatinga","1"],[4322.4,"Davidson Peixoto","Niterói","1 kkk"],[4323.0,"Tiago Mendes","Londres","2"],[4324.7,"Armando Castro","Macapá","a 2"],[4325.7,"Jailson Reis","Aracaju","a 2"],[4325.9,"Ariel Dias","Salvador","2"],[4328.1,"Saulo Correia","Lages","já mandei a 1 e contei tudo antes dela responder kkkk"],[4330.1,"Leonel Mendes","Natal","1"],[4330.9,"Ângelo Leite","Guarapuava","nenhuma"],[4335.4,"Jorge Campos","Vitória da Conquista","já mandei a 1"],[4337.7,"Diógenes Silva","Londrina","1"],[4337.7,"Humberto Mendes","Novo Hamburgo","1"],[4338.3,"Milton Tavares","Ceilândia","3"],[4339.9,"Jackson Coelho","Caruaru","a 3"],[4343.5,"Jaime Paiva","Jaraguá do Sul","2"],[4344.2,"Wagner Barros","Mogi das Cruzes","2. ela respondeu e ainda me puxou pra conversa"],[4350.7,"Ivo Guimarães","Chapecó","3"],[4354.6,"Henrique Peixoto","Anápolis","nunca mandei nenhuma, eu sempre mando oi sumida"],[4358.3,"Délcio Marques","Feira de Santana","a 2"],[4368.7,"Alan Sampaio","Juazeiro","1"],[4370.9,"Ramon Coelho","Nova Friburgo","1"],[4373.4,"Davi Campos","Rondonópolis","fiz a 2 e virou entrevista, dez perguntas seguidas. agora entendi o erro fatal"],[4401.6,"Amaral Torres","Fortaleza","que aula"],[4463.3,"Wanderley Ribeiro","São José dos Campos","anotando"],[4501.7,"Ademar Alves","Contagem","eu fazia isso"],[4533.2,"Cauê Lima","Lauro de Freitas","tô anotando tudo"],[4576.3,"Benício Moraes","Santa Cruz do Sul","que aula"],[4641.6,"Willian Lima","Londrina","caramba"],[4712.4,"Nélio Almeida","Campo Grande","muito bom"],[4757.3,"Davidson Pinto","Joinville","que clareza"],[4780.0,"Wilton Bezerra","Jequié","nada, respeita"],[4780.6,"Matias Andrade","Jequié","8"],[4780.6,"Zacarias Farias","São Luís","nada"],[4781.4,"Jailson Bezerra","Ribeirão Preto","8"],[4781.7,"Silvano Viana","Rio Verde","8"],[4782.3,"André Tavares","Vitória da Conquista","9"],[4782.4,"Jeremias Andrade","Londrina","6"],[4783.2,"Alexandre Cunha","Teresina","9"],[4783.6,"Jorge Bastos","Criciúma","nada, respeita"],[4783.9,"Sidney Ramos","Camaçari","8"],[4784.3,"Vicente Sampaio","Novo Hamburgo","nada"],[4786.7,"Zacarias Araújo","Salvador","9"],[4788.5,"Otoniel Vieira","Piracicaba","esperaria"],[4790.8,"Olavo Soares","Macapá","nada"],[4793.3,"Nicolas Matos","Santa Maria","nada"],[4794.0,"Bernardo Viana","Petrópolis","8"],[4794.3,"Igor Leite","Porto Velho","nada"],[4794.4,"Vicente Peixoto","Boston","6"],[4796.1,"Fabrício Coelho","Rio Branco","8"],[4799,"Valter Teixeira","Bagé","nada, Carol, ela pode estar trabalhando"],[4802.5,"Edinaldo Araújo","Araçatuba","nada"],[4802.8,"Elton Cavalcanti","Criciúma","nada"],[4803.3,"Egídio Moreira","Campina Grande","6"],[4805.3,"Ariel Ribeiro","Lages","6"],[4805.7,"Hermes Teixeira","Niterói","8"],[4808.4,"Moisés Souza","Parnaíba","8"],[4810.4,"Rui Ribeiro","Araraquara","ainda esperaria mais um pouco"],[4815.3,"Giovani Campos","Londrina","esperaria"],[4815.4,"Lindolfo Fernandes","Osasco","nada"],[4818.2,"Leonel Barbosa","Chapecó","8"],[4818.6,"Silvano Costa","Balneário Camboriú","nada!"],[4819.1,"Alcides Paiva","Parnaíba","8"],[4823.0,"Rafael Pinto","Boston","nada"],[4824.2,"Joelson Falcão","Erechim","nada, respeita"],[4824.7,"Milton Moura","Maceió","8"],[4825.8,"Gabriel Rocha","Dourados","6, parar de carregar a conversa"],[4832.3,"Heitor Xavier","Itapetininga","9, porque já virou padrão"],[4836.8,"Nelson Rezende","Patos de Minas","Carol, esse é exatamente o meu caso"],[4855.1,"Samuel Silva","Colatina","nada"],[4858.2,"Wellington Leite","Varginha","nada, respeita"],[4862.2,"Inácio Santana","Niterói","caramba"],[4902.6,"Rafael Carvalho","Bauru","verdade"],[4987.6,"Nestor Rocha","Boa Vista","isso dói"],[5018.1,"Pietro Fernandes","Cariacica","isso dói"],[5107.3,"Jackson Teixeira","Erechim","exatamente"],[5166.1,"Wanderley Guimarães","Lisboa","pegou fundo"],[5207.1,"Rafael Viana","Marabá","é isso"],[5269.8,"Edmilson Aguiar","Petrolina","verdade"],[5301.1,"Jaime Queiroz","Boa Vista","pesado isso"],[5360.1,"Diógenes Martins","Taubaté","que aula"],[5412.0,"Augusto Almeida","Erechim","eu"],[5412.1,"Inácio Siqueira","Jequié","eu kkk"],[5412.2,"Edinaldo Falcão","Volta Redonda","eu, as últimas três"],[5412.3,"Adalberto Teixeira","Rondonópolis","eu, as últimas três"],[5412.6,"Ademar Soares","Salvador","eu"],[5413.3,"Inácio Rodrigues","Orlando","eu"],[5414.3,"Matheus Tavares","Sorocaba","eu"],[5414.9,"Wellerson Oliveira","Londrina","eu"],[5415.1,"Jackson Pires","Blumenau","eu, as últimas três"],[5416.3,"Adalberto Tavares","Taubaté","eu"],[5418.5,"Bernardo Ribeiro","Londrina","eu"],[5420.1,"Rafael Xavier","São Luís","eu, todas"],[5420.5,"Moacir Costa","Parintins","eu kkk"],[5424.7,"Josimar Mendes","Vitória da Conquista","eu, sempre"],[5424.9,"Nilson Falcão","Boa Vista","eu, todas"],[5425.3,"Vicente Sales","Duque de Caxias","eu"],[5426.4,"Miguel Bezerra","São Paulo","eu, todas"],[5428.4,"Aníbal Ramos","Santo Ângelo","eu, todas"],[5428.7,"Humberto Rocha","Foz do Iguaçu","eu"],[5436.1,"Tiago Falcão","Vitória","eu, todas"],[5438.1,"Reinaldo Lima","Erechim","eu. as últimas cinco"],[5438.2,"Erasmo Moraes","Maringá","ela"],[5438.7,"Jeremias Souza","Umuarama","eu"],[5441.7,"Yuri Correia","Bagé","eu kkk"],[5442.2,"Erasmo Pires","Juazeiro do Norte","eu"],[5442.8,"Olavo Cavalcanti","Caruaru","eu, sempre"],[5445.1,"Patrick Guimarães","Balneário Camboriú","eu"],[5445.1,"Davidson Carvalho","Luziânia","eu"],[5445.1,"Diógenes Bezerra","João Pessoa","ela"],[5449.5,"Edmilson Falcão","Juiz de Fora","eu"],[5449.7,"Danilo Magalhães","Montes Claros","eu. nunca tinha reparado nisso"],[5451.0,"Hildebrando Cavalcanti","Canoas","eu"],[5451.1,"Nilson Brito","Foz do Iguaçu","ela"],[5451.7,"Gilson Pires","Passo Fundo","eu"],[5454.1,"Breno Matos","Itaperuna","ela"],[5454.6,"Aníbal Costa","Santo Ângelo","eu, as últimas três"],[5466,"Everton Mendes","Jequié","eu"],[5471.0,"Alisson Torres","Sinop","eu, sempre eu"],[5538.8,"Matheus Carvalho","Miami","eu fazia isso"],[5603.8,"José Siqueira","Jaraguá do Sul","eu fazia isso"],[5657.9,"José Farias","Boa Vista","eu fazia isso"],[5680.1,"Jeremias Magalhães","Uberaba","já fiz"],[5680.4,"Matheus Miranda","Salvador","já fiz várias"],[5680.9,"Cristóvão Pereira","Guarulhos","já"],[5681.4,"Luís Miranda","Feira de Santana","já fiz, Carol"],[5681.8,"Elizeu Dias","Dourados","já"],[5682.7,"Romeu Lima","Taubaté","já fiz isso"],[5682.9,"Elizeu Moreira","Lages","várias vezes"],[5686.0,"Nélio Mendes","Sobral","já fiz"],[5687.5,"Sidney Teixeira","Palmas","várias vezes"],[5690.7,"Amaral Fernandes","Canoas","já"],[5691.5,"Ademar Macedo","Dourados","já fiz isso"],[5695.1,"Iago Lopes","Juazeiro do Norte","já fiz semana passada"],[5697.4,"Sandro Pires","Barreiras","já fiz. ontem"],[5698.4,"Moacir Almeida","Várzea Grande","já fiz várias"],[5702.3,"Alexandre Guimarães","Campina Grande","já fiz semana passada"],[5704.0,"Rogério Campos","Limeira","já fiz várias vezes, e na hora eu sabia"],[5704.0,"Wilton Cunha","Umuarama","já fiz semana passada"],[5704.1,"Lázaro Macedo","Orlando","já fiz"],[5704.2,"Altair Mendes","Osasco","já fiz"],[5705.4,"Edmilson Coelho","Taguatinga","já fiz isso"],[5707.0,"Ubirajara Andrade","Varginha","já fiz semana passada"],[5708.1,"Agnaldo Nunes","Araçatuba","já fiz, Carol"],[5708.8,"Júlio Paiva","Caxias","escrevi, apaguei, escrevi de novo e mandei às três da manhã"],[5709.6,"Ângelo Costa","Barreiras","várias vezes"],[5715.6,"Nestor Santos","Natal","já fiz"],[5716.1,"Wellerson Mendes","Ipatinga","várias vezes"],[5718.9,"Altair Pires","Anápolis","já"],[5719.7,"Jucelino Ramos","Ponta Grossa","já"],[5720.6,"Fagner Alves","Dourados","já fiz"],[5722.0,"Armando Cunha","Sobral","já"],[5722.3,"Maximiliano Guimarães","Rondonópolis","já fiz, Carol"],[5735.3,"Emerson Almeida","Paulo Afonso","já mandei mensagem bêbado kkk"],[5741.9,"Otaviano Barros","Anápolis","nunca tinha pensado assim"],[5764.1,"Fabiano Andrade","Tubarão","já fiz"],[5766.3,"Josué Dias","Castanhal","já fiz"],[5768.4,"Valdir Duarte","Uruguaiana","sabia que não devia, mas achei que dessa vez ia ser diferente"],[5774.7,"Lucas Pinto","Palmas","fiz isso hoje à tarde"],[5792.2,"Tarcísio Duarte","Patos","já fiz"],[5798,"Ailton Magalhães","Itumbiara","já fiz, Carol"],[5819.0,"Wendel Miranda","Osasco","eu fazia isso"],[5875.3,"Zacarias Macedo","Campina Grande","anotado"],[5953.1,"Matias Cavalcanti","Presidente Prudente","muito bom"],[6040.7,"Luís Silva","Taguatinga","pegou fundo"],[6125.2,"Romeu Matos","Mogi das Cruzes","boa, Carol"],[6188.1,"Yuri Freitas","Bauru","sou eu"],[6233.6,"Adalberto Rodrigues","Uberlândia","que verdade"],[6263.9,"Nilson Prado","Camaçari","anotando"],[6313.2,"Augusto Ferreira","Jaraguá do Sul","boa, Carol"],[6396.3,"Nilson Pacheco","Lisboa","nunca tinha pensado assim"],[6452.3,"Fagner Barros","João Pessoa","kkkk sou eu"],[6512.8,"Cleiton Aguiar","Itajaí","me identifiquei"],[6598.4,"Jardel Sales","Bauru","é isso"],[6638.1,"Elizeu Peixoto","Cuiabá","três dias"],[6638.5,"Américo Bezerra","Santa Cruz do Sul","três dias"],[6639.0,"Benício Torres","Londres","esperei uma semana"],[6639.7,"Kaique Coelho","Jundiaí","três dias"],[6641.5,"Joaquim Correia","Marília","esperei uma semana"],[6644.8,"Joelson Cunha","Joinville","três dias kkk"],[6647.1,"Wanderley Torres","Rio Branco","fiz isso"],[6647.3,"Otoniel Gomes","Salvador","três dias, sempre"],[6647.7,"Jeremias Soares","Foz do Iguaçu","três dias kkk"],[6648.1,"Tiago Teixeira","Parnaíba","esperei uma semana"],[6650.0,"Raul Batista","Guarapuava","três dias. quando mandei ela já tava fria"],[6651.6,"Moacir Rocha","Santa Cruz do Sul","3 dias"],[6653.1,"Hermes Barbosa","Lages","três dias"],[6653.3,"Claudemir Mendes","Brasília","3 dias"],[6654.3,"Jailson Magalhães","Mossoró","três dias"],[6655.6,"Gilvan Nunes","Sorocaba","três dias"],[6656.4,"Cláudio Ramos","Linhares","meus amigos juram por essa regra"],[6657.7,"Alcides Prado","Catalão","três dias, sempre"],[6659.7,"Júnior Santana","Osasco","três dias, sempre"],[6662.6,"Nélio Pereira","Várzea Grande","três dias kkk"],[6663.1,"Felipe Carvalho","Indaiatuba","esperei cinco pra garantir"],[6666.3,"Aldo Freitas","Sobral","três dias kkk"],[6668.4,"Matias Pinto","Ceilândia","fiz isso"],[6668.5,"Lindolfo Paiva","Guarapuava","três dias"],[6668.6,"Rafael Bezerra","Palmas","três dias"],[6671.5,"Gean Dias","Chapadinha","três dias"],[6673.8,"Wilson Lima","Três Lagoas","três dias"],[6676.5,"Artur Nascimento","Lajeado","então tem que mandar no mesmo dia?"],[6692.4,"Lindolfo Lopes","Porto","tô anotando tudo"],[6734.5,"Aldo Miranda","Presidente Prudente","pesado isso"],[6768.1,"Elton Prado","Natal","tô aprendendo muito"],[6805.3,"Aldo Coelho","Anápolis","nunca tinha pensado assim"],[6878.0,"Marcílio Castro","Taguatinga","boa, Carol"],[6952.4,"Carlos Silva","Pelotas","isso é muito real"],[7019.3,"Fernão Machado","Guarulhos","real"],[7078.1,"Amauri Siqueira","Serrinha","meu amigo mandou eu sumir e aconteceu igualzinho"],[7092.1,"Reginaldo Castro","Lins","no meu grupo cada um fala uma coisa"],[7098.0,"Jonatas Rocha","Rio Grande","o amigo que dá conselho pra todo mundo é o que mais apanha no próprio namoro kkk"],[7108.4,"Yuri Medeiros","Santo Ângelo","boa, Carol"],[7115.4,"Clayton Rodrigues","Cáceres","meu melhor amigo só fala esquece ela e pega outra"],[7143.3,"Valdemar Lima","Guarapari","sou eu"],[7173.0,"João Moura","Campinas","voltou, Carol"],[7173.6,"Moacir Nascimento","Criciúma","voltou!"],[7173.7,"Domingos Batista","Foz do Iguaçu","tô ouvindo e vendo"],[7174.7,"Carlos Falcão","Olinda","agora sim"],[7176.7,"José Monteiro","Recife","caiu aqui também"],[7177.9,"Isaac Batista","Guarapuava","voltou"],[7178.2,"Denilson Araújo","Piracicaba","tô ouvindo"],[7178.3,"Nélio Moura","Montes Claros","tô ouvindo e vendo"],[7180.2,"Fernão Nascimento","Garanhuns","te vendo"],[7180.9,"Josimar Santana","Natal","tô ouvindo e vendo"],[7182.5,"Gilson Vieira","Guarulhos","agora sim"],[7182.7,"Wanderley Siqueira","Joinville","voltou!"],[7183.8,"Ubirajara Sampaio","São Paulo","voltou!"],[7184.4,"Ubirajara Fonseca","Ilhéus","caiu aqui também"],[7190.3,"Cristóvão Nascimento","Juazeiro","te vendo"],[7191.0,"Joaquim Medeiros","Lisboa","voltou, Carol"],[7195.2,"Edmilson Batista","Três Lagoas","te vendo"],[7195.5,"Humberto Martins","Balneário Camboriú","voltou!"],[7196.7,"Odair Dias","Goiânia","voltou, Carol"],[7196.9,"Odair Almeida","Vitória","tô ouvindo e vendo"],[7197.3,"Ubirajara Bezerra","Taguatinga","tô ouvindo"],[7199.6,"Cauê Ribeiro","Miami","caiu aqui também"],[7233.3,"Pietro Ferreira","Bauru","4"],[7233.8,"Gilson Rodrigues","Brasília","6"],[7235.0,"Milton Correia","Catalão","5"],[7235.3,"Júnior Alves","Jaraguá do Sul","4"],[7236.3,"Alexandre Carvalho","Guarulhos","4"],[7237.9,"Luís Dias","Imperatriz","6"],[7238.0,"Isaac Barbosa","Lauro de Freitas","5"],[7238.2,"Otaviano Carvalho","São Paulo","4"],[7239.3,"Jaime Aguiar","Porto Alegre","4"],[7239.6,"Francisco Macedo","Blumenau","5"],[7240.8,"Mauro Matos","Cabo Frio","4"],[7242.0,"Ângelo Reis","Arapiraca","4"],[7243.3,"Osmar Cardoso","Campos dos Goytacazes","5"],[7246.9,"Zacarias Cavalcanti","Petrolina","5"],[7247.5,"Tadeu Rezende","Bragança","11, os encontros foram bons"],[7247.5,"Claudemir Peixoto","Araçatuba","4"],[7249.4,"Wanderley Silva","Osasco","5"],[7251.0,"Valdemar Ribeiro","Londrina","4"],[7252.4,"Wendel Vieira","Caxias do Sul","5"],[7254.2,"Ivo Teixeira","Canoas","5"],[7264.6,"Bernardo Sales","Vila Velha","6"],[7266.7,"Moacir Falcão","Contagem","5"],[7267.4,"Erasmo Soares","Osasco","5"],[7280.0,"Kaique Moura","Curitiba","mudei pra 6"],[7280.5,"Alexandre Leite","Boa Vista","6"],[7280.6,"Júnior Carvalho","Lages","6!"],[7281.6,"Joaquim Ramos","Serra","6"],[7282.9,"Joelson Cardoso","Guarulhos","6!"],[7283.0,"Joaquim Castro","Juazeiro","6"],[7283.8,"Amaral Santana","Santa Maria","mudei pra 6"],[7287.4,"Maximiliano Paiva","Guarapari","6"],[7287.7,"Odair Reis","Miami","6"],[7288.8,"Matias Fonseca","Marília","6"],[7289.0,"Vagner Rocha","Foz do Iguaçu","6"],[7291.6,"Lauro Falcão","Itajubá","nada, ele tá carregando sozinho"],[7292.7,"Dalton Santana","Passo Fundo","mudei pra 6"],[7293.5,"Marcílio Medeiros","Garanhuns","mudei pra 6"],[7296.6,"Nilton Santos","Crato","esse Rafael sou eu"],[7300.1,"Jean Duarte","Rio Claro","6"],[7300.1,"Rafael Falcão","Guarulhos","mudei pra 6"],[7302.5,"Ítalo Leite","Cachoeiro de Itapemirim","6"],[7303.6,"Carlos Moreira","São Luís","6"],[7305.1,"Firmino Rodrigues","Ribeirão Preto","6"],[7306.5,"Mauro Matos","Cabo Frio","mudei pra 6"],[7307.9,"Délcio Santana","Feira de Santana","6!"],[7309.1,"Milton Ferreira","Ilhéus","nada"],[7309.7,"Firmino Andrade","Campina Grande","6"],[7349.9,"Olavo Torres","Franca","kkkk sou eu"],[7383.5,"João Gonçalves","Petrópolis","boa, Carol"],[7417.6,"Haroldo Pacheco","Dourados","kkkk sou eu"],[7479.2,"Jucelino Prado","Canoas","nunca tinha pensado assim"],[7496.1,"Natanael Sampaio","Sapiranga","aconteceu comigo semana passada, só que com 24 horas"],[7505.0,"Gervásio Moraes","Bom Jesus da Lapa","Carol, mas eu seguro, eu sou forte"],[7533.8,"Alexandre Xavier","Contagem","kkkk sou eu"],[7582.7,"Wilton Santana","Ribeirão Preto","tô aprendendo muito"],[7639.7,"Lindolfo Martins","Mogi das Cruzes","anotado"],[7702.0,"Maximiliano Araújo","Curitiba","ex"],[7702.7,"Fernão Ferreira","Cabo Frio","passado"],[7703.1,"Gilson Moreira","Bagé","ex de 7 anos"],[7703.2,"Rafael Barros","Parintins","ex de 7 anos"],[7703.2,"Augusto Fernandes","Olinda","ex!"],[7703.9,"Ubirajara Barros","Vitória da Conquista","ex"],[7704.2,"Otaviano Queiroz","Parintins","ex"],[7704.3,"Hermes Freitas","Porto Alegre","ex"],[7705.1,"Davidson Ferreira","Erechim","passado"],[7706.1,"Rafael Marques","Niterói","ex"],[7706.2,"Nélio Nascimento","Sinop","passado"],[7706.8,"Matias Macedo","Boa Vista","ex, 3 anos"],[7707.1,"Ivo Castro","Foz do Iguaçu","ex"],[7707.5,"Carlos Leite","Uruguaiana","passado"],[7707.7,"Jailson Mendes","Caruaru","passado"],[7712.0,"Edmilson Nunes","Caruaru","passado"],[7716.6,"Denilson Falcão","Goiânia","ex"],[7719.1,"Davidson Bezerra","Parintins","ex"],[7719.4,"Claudemir Queiroz","Vila Velha","ex, 3 anos"],[7721.9,"Gilvan Viana","Uruguaiana","passado"],[7724.2,"Luiz Ramos","Caicó","ex. quatro anos juntos"],[7725.0,"Romeu Prado","Porto Alegre","ex, 3 anos"],[7727.9,"Jucelino Ferreira","Pelotas","ex"],[7728.3,"Elton Cardoso","Cabo Frio","ex"],[7728.6,"Iago Sales","Montes Claros","passado"],[7728.8,"Arnaldo Ramos","Ilhéus","ex, terminou faz dois meses"],[7729.2,"Matheus Prado","Fortaleza","ex"],[7730.0,"Denilson Gomes","Três Lagoas","ex"],[7734.3,"Ezequiel Coelho","Divinópolis","passado"],[7736.1,"Gerson Rocha","Sorocaba","ex. a gente tem uma filha"],[7738.8,"Moacir Queiroz","Umuarama","ex, 3 anos"],[7740.4,"Silvano Monteiro","Belo Horizonte","ex!"],[7744.5,"Fagner Fonseca","Montes Claros","ex"],[7751.0,"Cauã Paiva","Altamira","passado. uma menina da faculdade"],[7755.4,"Diogo Lima","São José dos Campos","ex"],[7760.1,"Pedro Macedo","Viçosa","ex e passado ao mesmo tempo kkk"],[7764.3,"Milton Teixeira","Niterói","verdade pura"],[7774.2,"Benedito Rezende","Tefé","ex"],[7780.9,"Antônio Fonseca","Picos","ex"],[7831.6,"Altair Castro","Juazeiro","caderno cheio já"],[7878.9,"Moacir Guimarães","Mogi das Cruzes","anotado"],[7928.7,"Joaquim Coelho","Divinópolis","que aula"],[7981.8,"Kaique Alves","Cuiabá","verdade"],[8035.8,"Adalberto Almeida","Petrópolis","verdade pura"],[8081.9,"Ademar Aguiar","Santa Cruz do Sul","me identifiquei"],[8133.2,"Milton Vieira","Criciúma","verdade"],[8193.2,"Denilson Viana","Blumenau","anotado"],[8282.3,"Gilvan Miranda","Osasco","eu fazia isso"],[8336.2,"Claudemir Araújo","Camaçari","isso dói"],[8390.3,"Cleiton Teixeira","Santos","que aula"],[8444.9,"Agnaldo Rodrigues","Mogi das Cruzes","isso é muito real"],[8516.1,"Humberto Cardoso","Campo Grande","boa, Carol"],[8549.8,"Valdemar Viana","Aracaju","pesado isso"],[8593.9,"Joaquim Queiroz","Caxias do Sul","faz sentido demais"],[8630.0,"Edmilson Oliveira","Porto","verdade"],[8707.1,"Jeremias Monteiro","Mossoró","é isso"],[8764.1,"Gilvan Sales","Ribeirão Preto","21"],[8764.6,"Jailson Marques","Campina Grande","19 com certeza"],[8764.8,"Fernão Vieira","Petrópolis","21"],[8764.9,"Bernardo Sampaio","Sobral","19"],[8765.4,"Ubirajara Teixeira","Sobral","19"],[8765.9,"Ariel Viana","Canoas","20"],[8766.0,"Nélio Lima","Londres","20"],[8769.1,"Joel Pereira","Cruz Alta","19. acabei de perceber que nunca parei de mandar mensagem"],[8772.4,"Jorge Pereira","Lisboa","21"],[8775.8,"Giovani Moura","Santo Ângelo","19 com certeza"],[8777.4,"Jorge Mendes","Garanhuns","19"],[8778.6,"Jeremias Ribeiro","Criciúma","20"],[8780.1,"Moacir Alves","Campos dos Goytacazes","21"],[8784.6,"Lázaro Andrade","Duque de Caxias","nenhuma"],[8784.8,"Raimundo Moura","Bacabal","20, já faz quatro meses"],[8785.3,"Ezequiel Moreira","Juazeiro do Norte","20"],[8786.0,"Washington Dias","Cuiabá","nenhuma"],[8788.3,"Flávio Alves","Poços de Caldas","21"],[8789.1,"Firmino Sampaio","Teresina","20"],[8789.5,"Elton Gomes","Montes Claros","19"],[8790.1,"Claudemir Moreira","Serra","19"],[8791.4,"Isaac Falcão","Porto","nenhuma"],[8791.5,"Alexandre Tavares","Marabá","19"],[8791.8,"Mário Santana","Assis","não sei, ela tá com outro"],[8793.6,"Silvano Sampaio","Santarém","21"],[8795.0,"Dalton Cavalcanti","Manaus","20"],[8796.9,"Wendel Paiva","João Pessoa","19 com certeza"],[8797.9,"Nélio Vieira","Canoas","20"],[8801.0,"Bernardo Vieira","Formosa","19"],[8801.3,"Romeu Moreira","Palmas","19 com certeza"],[8805.6,"Hermes Castro","Chapecó","20"],[8807.2,"Gilvan Torres","Bagé","20"],[8810.6,"Wanderson Correia","Valparaíso","19"],[8814.0,"Geraldo Rodrigues","Muriaé","19"],[8817.7,"Robson Andrade","Governador Valadares","entendi que no meu caso é nenhuma das três"],[8840.6,"Yuri Falcão","Limeira","pegou fundo"],[8912.1,"Maximiliano Batista","Taguatinga","é isso"],[8964.6,"Dalton Fernandes","Camaçari","real"],[8996.9,"Silvano Lopes","Cuiabá","é isso"],[9069.3,"Hildebrando Xavier","Marabá","muito bom"],[9115.1,"Jardel Magalhães","Parintins","ela sumiu e voltou do nada"],[9115.2,"Jucelino Queiroz","Passo Fundo","ela respondeu só um ok"],[9115.4,"Miguel Macedo","Lauro de Freitas","ela sumiu e voltou do nada"],[9115.5,"Nicolas Farias","Lauro de Freitas","ela curte tudo mas não responde"],[9117.5,"Claudemir Batista","Formosa","ela pediu tempo de novo"],[9122.2,"Adalberto Monteiro","Poços de Caldas","ela pediu tempo de novo"],[9123.2,"Ângelo Gomes","Santo Ângelo","ela curte tudo mas não responde"],[9123.6,"Carlos Correia","Curitiba","ela respondeu só um ok"],[9132.9,"Júnior Barros","Formosa","ela sumiu e voltou do nada"],[9136.9,"Miguel Nascimento","Umuarama","ela pediu tempo de novo"],[9138.1,"Ademar Machado","Erechim","ela sumiu e voltou do nada"],[9140.9,"Otaviano Pires","João Pessoa","ela respondeu só um ok"],[9144.8,"Roberto Brito","Natal","ela voltou a falar comigo mas tá namorando"],[9145.3,"Edinaldo Prado","Niterói","ela pediu tempo de novo"],[9149.5,"Nicolas Miranda","Olinda","ela respondeu só um ok"],[9151.0,"Hélio Ramos","Campo Mourão","a gente ainda mora junto depois do término"],[9157.2,"Vitor Dias","Teófilo Otoni","ela me desbloqueou ontem e não falou nada"],[9165.4,"Marcos Reis","Juazeiro do Norte","ela só responde de madrugada"],[9169.2,"Domingos Cardoso","Sinop","caderno cheio já"],[9170.0,"Jair Lima","Arcoverde","ela mandou um áudio chorando e depois apagou"],[9174.7,"Ulisses Farias","Iguatu","ela pediu um tempo mas continua curtindo tudo que eu posto"],[9180.2,"Rômulo Vieira","Rio das Ostras","ela marcou encontro e desmarcou duas vezes"],[9186.7,"Sidnei Barbosa","Jundiaí","a mãe dela me mandou mensagem"],[9200.3,"Aloísio Fonseca","Itacoatiara","ela voltou depois de três meses perguntando se eu tô bem"],[9207.4,"Juan Alves","Corumbá","ela disse que sente falta mas não quer voltar"],[9253.3,"Jailson Vieira","Manaus","isso aí"],[9285.3,"Elizeu Coelho","Belém","anotando"],[9350.3,"Domingos Santos","Ponta Grossa","pesado isso"],[9419.5,"Joaquim Teixeira","Osasco","que verdade"],[9492.9,"Lindolfo Soares","Goiânia","nunca tinha pensado assim"],[9561.4,"José Batista","Petrolina","boa, Carol"],[9587.1,"Fred Gonçalves","Gravataí","era exatamente isso que faltava no caso das 48 horas"],[9596.3,"Ney Fernandes","Ourinhos","meu caderno não responde kkk, eu só lembro da regra quando já mandei"],[9605.0,"Edgar Sales","Penedo","funciona no celular?"],[9624.0,"Rubens Fonseca","Catalão","ainda faltam dezenove... me arrepiei"],[9630.5,"Valmir Souza","Ji-Paraná","é a Carol que responde lá dentro?"],[9642.5,"Ivo Moura","Ceilândia","nunca tinha pensado assim"],[9715.0,"Otoniel Bezerra","Volta Redonda","anotando"],[9748.1,"José Peixoto","Santarém","isso é muito real"],[9811.6,"Gilvan Almeida","Mossoró","que clareza"],[9876.6,"Alexandre Bezerra","Lauro de Freitas","real"],[9907.3,"Lázaro Gomes","Guarapuava","anotado"],[9972.7,"Vicente Siqueira","Londres","exatamente"],[10042.0,"Cleiton Moreira","Contagem","isso dói"],[10077.1,"Ernesto Machado","Sertãozinho","Carol, mas eu posso perguntar isso pro ChatGPT"],[10094.7,"Ezequiel Siqueira","Feira de Santana","me identifiquei"],[10155.5,"José Cunha","Jundiaí","que aula"],[10166.3,"Gildo Barros","Codó","mas uma inteligência artificial não entende sentimento"],[10207.6,"Caetano Barbosa","Cametá","mas ela não conhece a mulher com quem eu tô"],[10234.0,"Pietro Moraes","Macaé","kkkk sou eu"],[10259.1,"Zeca Castro","Itabaiana","agora entendi a diferença"],[10290.2,"Isaac Brito","Piracicaba","faz sentido demais"],[10369.1,"Washington Magalhães","Palmas","anotado"],[10428.2,"Valdomiro Pinto","Campina Grande","tô aqui ainda"],[10471.0,"Nilson Vieira","Mossoró","verdade"],[10545.3,"Olavo Bastos","Pelotas","verdade pura"],[10580.2,"Giovani Almeida","São Luís","verdade"],[10616.2,"Otoniel Falcão","Montes Claros","certíssima"],[10661.5,"Sidney Bastos","Pelotas","exatamente"],[10741.0,"Nestor Fonseca","Curitiba","que verdade"],[10816.6,"Alcides Campos","Caxias do Sul","eu fazia isso"],[10848.2,"Nathan Gomes","Presidente Prudente","verdade"],[10936.1,"Nélio Fernandes","Apucarana","tô aqui ainda"],[11025.4,"Silvano Fonseca","Taubaté","tô aprendendo muito"],[11084.5,"Luís Reis","Bauru","que clareza"],[11168.9,"João Sales","Varginha","tô anotando tudo"],[11201.2,"Vicente Machado","Juazeiro","é isso"],[11289.1,"Egídio Siqueira","Curitiba","verdade pura"],[11348.8,"Ariel Gomes","Itajaí","manda o link"],[11349.1,"Leonel Oliveira","Palmas","quero"],[11349.3,"Hermes Mendes","São José dos Campos","eu quero"],[11351.1,"Olavo Magalhães","Petrópolis","quero!!"],[11351.8,"Rafael Peixoto","Pelotas","quero, Carol"],[11352.1,"Gilvan Fonseca","Jequié","quero"],[11352.6,"Josimar Reis","Apucarana","quero"],[11352.7,"Vicente Teixeira","Linhares","quero agora"],[11353.6,"Vicente Mendes","Ceilândia","quero agora"],[11353.7,"Carlos Paiva","Poços de Caldas","quero"],[11354.6,"Aníbal Vieira","Sorocaba","quero agora"],[11355.3,"Humberto Pereira","São Luís","quero"],[11355.3,"Valdomiro Peixoto","Duque de Caxias","quero"],[11357.5,"Ubirajara Moura","Belo Horizonte","quero"],[11359.0,"Fernão Barros","Rondonópolis","quero, Carol"],[11362.1,"Diógenes Ferreira","Taubaté","quero o link"],[11362.3,"Washington Queiroz","Fortaleza","QUERO"],[11366.5,"Délcio Oliveira","Bauru","quero, Carol"],[11369.6,"Jailson Cunha","Sinop","manda o link"],[11371.3,"Leôncio Magalhães","Maricá","quero"],[11371.4,"Roberval Coelho","Santa Maria","eu quero"],[11374.9,"Rafael Rezende","Passo Fundo","quero o link"],[11375,"Zé Carlos Siqueira","Cajazeiras","quero. vou fazer a fundação hoje mesmo"],[11375.2,"Erasmo Tavares","Dourados","eu quero"],[11376.4,"Egídio Gonçalves","Guarapari","quero"],[11378.8,"Ademar Rodrigues","Cascavel","quero agora"],[11379.0,"Firmino Gomes","Rio de Janeiro","quero"],[11379.6,"Carlos Viana","Boa Vista","quero!"],[11380.7,"Giovani Nunes","Juiz de Fora","QUERO"],[11381.1,"Rodolfo Leite","Apucarana","97 é menos do que eu gastei na última saída com ela kkk"],[11381.2,"Altair Dias","Juiz de Fora","manda o link"],[11382.2,"Ângelo Ferreira","Varginha","quero!"],[11382.4,"Egídio Pereira","Catalão","eu quero"],[11384.2,"Elizeu Oliveira","Macaé","quero o link"],[11387.6,"Iago Marques","Parnaíba","quero"],[11388.5,"Valdomiro Almeida","Uberlândia","quero o link"],[11388.6,"Rafael Bastos","Jundiaí","quero"],[11389.1,"Firmino Lopes","Anápolis","QUERO"],[11389.2,"Joaquim Nunes","Camaçari","manda o link"],[11390.3,"Diógenes Aguiar","Jaraguá do Sul","quero o link"],[11391.6,"Severino Cunha","Santa Cruz do Capibaribe","dá pra começar falando da ex e depois usar pra conhecer outra pessoa?"],[11392.2,"Kaique Matos","Parintins","quero!"],[11394.4,"Kaique Silva","Campo Grande","quero"],[11398.1,"Nicolas Coelho","Vitória","quero"],[11407.0,"Alessandro Fonseca","Botucatu","quero"],[11409.6,"Cássio Batista","Paranavaí","quero"],[11412.1,"Edvaldo Fernandes","Itapipoca","só o modo crise já valeria pra mim"],[11424.1,"Norberto Prado","Videira","quantas sessões tem no mês?"],[11427.9,"Wallace Falcão","Macaé","vou entrar agora"],[11432.1,"Josias Araújo","Araguaína","entrando agora"],[11457.5,"Anselmo Fernandes","Uberaba","já tô fazendo o cadastro"],[11462.6,"Célio Santos","Ponta Porã","assinei, o código chegou na hora"],[11470,"Dorival Moraes","Assis Chateaubriand","entrei, já tô na sessão de fundação"],[11476.9,"Amaral Bastos","São Paulo","entrei"],[11477.1,"Joelson Queiroz","Montes Claros","já tô dentro"],[11478.4,"Nicolas Duarte","Porto","já tô dentro"],[11478.4,"Aníbal Moraes","Brasília","entrei, Carol"],[11479.6,"Nathan Sales","Santo Ângelo","assinado"],[11480.7,"Edilson Pacheco","Porto Velho","entrei, Carol"],[11485.8,"Nilson Santos","Niterói","entrei"],[11503.1,"Lázaro Cunha","Duque de Caxias","assinado"],[11529.8,"Jaime Monteiro","Foz do Iguaçu","assinado"],[11530.0,"Jucelino Xavier","Santos","consegui entrar"],[11547.8,"Fernão Oliveira","Catalão","assinado"],[11551.1,"Francisco Teixeira","Imperatriz","entrei agora"],[11556.1,"Alexandre Pires","Joinville","entrei"],[11561.6,"Maximiliano Gonçalves","Criciúma","consegui entrar"],[11568.1,"Adalberto Ramos","Santa Maria","assinado"],[11569.0,"Isaac Oliveira","João Pessoa","assinei"],[11604.7,"Armando Coelho","Miami","entrei agora"],[11643.4,"Vicente Aguiar","Parnaíba","entrei, Carol"],[11643.6,"Erasmo Barbosa","Jundiaí","fazendo o cadastro"],[11676.4,"Otaviano Santos","Santo Ângelo","entrei"],[11677.5,"Milton Moreira","Piracicaba","assinado"],[11702.5,"Valdemar Peixoto","Poços de Caldas","consegui entrar"],[11707.6,"Jailson Barros","Vitória da Conquista","fazendo o cadastro"],[11709.7,"Ivo Freitas","Feira de Santana","assinado"],[11717.4,"Giovani Marques","Novo Hamburgo","fazendo o cadastro"],[11722.3,"Yuri Peixoto","Mogi das Cruzes","assinado"],[11730.4,"Wilton Aguiar","Salvador","já tô dentro"],[11741.4,"Délcio Ribeiro","Dourados","fazendo o cadastro"],[11757.1,"Roberval Dias","Boa Vista","fazendo o cadastro"],[11758.8,"Vicente Tavares","Joinville","fazendo o cadastro"],[11807.3,"Lindomar Soares","Barra do Garças","o código chega na hora?"],[11824.7,"Glauco Souza","Avaré","dá pra usar no computador também?"],[11831.8,"Diógenes Farias","Belém","isso aí"],[11841.1,"Osvaldo Santana","Ubá","vou começar contando a minha 22ª"],[11851.3,"Paulinho Falcão","Santo Ângelo","minha ex vai ficar sabendo de alguma coisa?"],[11872.8,"Evandro Monteiro","Rio do Sul","fazendo o cadastro agora"],[11880.7,"Messias Ramos","Brumado","fazendo o cadastro"],[11885.1,"Erasmo Fonseca","Caxias do Sul","pagamento aprovado"],[11885.3,"Wilton Gonçalves","Formosa","consegui"],[11886.2,"Ângelo Barbosa","São Luís","pagamento aprovado"],[11888.5,"Adalberto Aguiar","Fortaleza","assinei aqui"],[11888.5,"Joaquim Silva","Anápolis","entrei!"],[11888.9,"Willian Ribeiro","Itajaí","entrei"],[11889.1,"Nicolas Silva","Santa Cruz do Sul","pagamento aprovado"],[11889.6,"Isaac Silva","Apucarana","consegui entrar"],[11889.7,"Wanderley Almeida","Macaé","entrei!"],[11891.8,"Jucelino Costa","Belo Horizonte","entrei!"],[11896.1,"Alcides Viana","Uberlândia","assinei aqui"],[11899.7,"Hermes Carvalho","Porto","entrei, já tô na fundação"],[11900.6,"Nathan Torres","Franca","assinei aqui"],[11902.5,"Washington Freitas","Parintins","pagamento aprovado"],[11903.0,"Expedito Cunha","Quixadá","entrei, Carol"],[11909.0,"Fausto Brito","Rio Largo","assinei. ufa, finalmente"],[11911.5,"Nicolas Correia","São Paulo","assinei"],[11912.9,"Joelson Alves","Dourados","assinei aqui"],[11916.1,"Genival Gonçalves","Sousa","consegui! não deixem pra depois, galera"],[11919.6,"Ângelo Xavier","Feira de Santana","assinei"],[11920.2,"Odair Moraes","Uberlândia","pagamento aprovado"],[11921.6,"Claudemir Costa","Niterói","consegui entrar"],[11923.5,"Marcílio Rocha","Bauru","assinei aqui"],[11923.7,"Iago Magalhães","Camaçari","pagamento aprovado"],[11924.1,"Horácio Medeiros","Bebedouro","assinei. não quero passar mais uma madrugada sozinho com a mensagem pronta"],[11928.3,"Gilvan Martins","Parintins","entrei!"],[11941.8,"Irineu Fernandes","Concórdia","tá carregando aqui"],[11948.1,"Jurandir Fernandes","Paracatu","entrei"],[11953.3,"Aníbal Souza","Marabá","consegui entrar"],[11955.1,"Laércio Vieira","Votuporanga","já tô na fundação contando a minha 22ª situação"],[11965.1,"Lázaro Correia","Lages","consegui"],[11966.1,"Maurício Martins","Caratinga","assinado"],[11968.5,"Nivaldo Reis","Serra Talhada","pagamento aprovado"],[11968.5,"Claudemir Vieira","Parnaíba","consegui entrar"],[11972.7,"Orlando Martins","Unaí","obrigado pela aula. entrei pra parar de explicar tudo de novo pro grupo dos amigos"],[11973.9,"Kaique Correia","Bauru","entrei, já tô na fundação"],[11991.9,"Evandro Monteiro","Rio do Sul","terminei o cadastro!"],[11998.1,"Fernão Almeida","Campina Grande","é isso"],[12037.5,"Altair Gonçalves","Caruaru","kkkk sou eu"],[12087,"Vanderlei Andrade","Tatuí","e se ela der um conselho ruim?"],[12089.7,"Valdomiro Bezerra","Macaé","verdade pura"],[12117.8,"Rubem Souza","Esteio","serve pra reconquista?"],[12164.4,"Wilmar Peixoto","Pato Branco","e se ela estiver com outra pessoa?"],[12178.4,"Lázaro Gonçalves","Palmas","anotando"],[12250.5,"Nélio Duarte","Vitória da Conquista","que verdade"],[12322.2,"Ivo Santana","Novo Hamburgo","anotado"],[12342.3,"Arlindo Vieira","Canoinhas","sou casado. serve pra casamento ou só pra quem tá conhecendo alguém?"],[12357.5,"Vicente Miranda","Linhares","anotado"],[12372.4,"Afonso Gomes","Cruzeiro do Sul","isso não é manipulação?"],[12404.7,"Wanderley Falcão","Contagem","caramba"],[12414.5,"Tomás Lopes","Ituiutaba","tô muito mal desde o término. ela ajuda nisso?"],[12451.7,"Emanuel Moura","Penápolis","funciona pra mulher também? minha irmã tá passando por isso"],[12455.9,"Edmilson Guimarães","Ipatinga","que aula"],[12488.7,"Denilson Reis","Marília","eu fazia isso"],[12489.8,"Clóvis Soares","Mafra","como cancela?"],[12572.3,"Marcílio Souza","São José dos Campos","isso aí"],[12607.4,"Kaique Bastos","Araçatuba","isso dói"],[12635.0,"Augusto Machado","Uberlândia","é a minha vez"],[12635.5,"Valdomiro Nascimento","Arapiraca","é a minha vez de verdade"],[12635.8,"Edilson Lopes","Cariacica","minha vez"],[12636.3,"Otoniel Lima","Camaçari","é a minha vez, Carol"],[12637.8,"Cleiton Barbosa","Catalão","é a minha vez de verdade"],[12638.9,"Adalberto Coelho","Olinda","é a minha vez"],[12639.5,"Maximiliano Souza","Lisboa","é a minha vez, Carol"],[12639.6,"Benício Bezerra","Cabo Frio","é a minha vez!"],[12639.7,"Firmino Miranda","Rio Branco","é a minha vez de verdade"],[12640.3,"Otoniel Teixeira","Serra","assinei, é a minha vez"],[12640.4,"Altair Moura","Campos dos Goytacazes","assinei, é a minha vez"],[12642.4,"José Pires","Limeira","assinei, é a minha vez"],[12643.2,"Francisco Santana","Maceió","minha vez"],[12644.2,"Jardel Torres","Londrina","minha vez"],[12647.7,"Altair Prado","Vitória da Conquista","é a minha vez"],[12647.9,"Claudemir Correia","Goiânia","é a minha vez"],[12650.5,"Zacarias Soares","Dourados","assinei, é a minha vez"],[12651.2,"Cauê Barros","Catalão","é a minha vez"],[12654.1,"Plínio Cavalcanti","Jacarezinho","é a minha vez. acabei de assinar"],[12654.8,"Nilson Martins","Taubaté","minha vez"],[12657.3,"Isaac Farias","João Pessoa","é a minha vez"],[12657.4,"Valdomiro Castro","Campo Grande","é a minha vez"],[12659.0,"Quirino Prado","Crateús","entrei agora"],[12662.4,"Erasmo Macedo","Marabá","é a minha vez!"],[12663.1,"Renan Monteiro","Nova Iguaçu","ia esperar a aula acabar mas assinei antes"],[12664.9,"Alcides Moura","Itajaí","é a minha vez"],[12666.7,"Jardel Queiroz","Porto Alegre","é a minha vez de verdade"],[12668.9,"Valdomiro Cavalcanti","Rio Branco","é a minha vez, Carol"],[12670.1,"Sebastião Reis","Guaxupé","é a minha vez, já tô no aplicativo"],[12671.1,"Nélio Freitas","Belém","é a minha vez de verdade"],[12673.2,"João Guimarães","Santos","é a minha vez"],[12675.5,"Olavo Ribeiro","Santa Maria","minha vez"],[12676,"Thales Xavier","Itu","assinei e a primeira coisa que fiz foi contar a briga de domingo"],[12676.8,"Claudemir Santos","Arapiraca","minha vez"],[12676.8,"Washington Sampaio","Nova Iguaçu","é a minha vez"],[12677.3,"Carlos Vieira","Mogi das Cruzes","é a minha vez de verdade"],[12681.6,"Alexandre Lopes","Novo Hamburgo","é a minha vez, Carol"],[12685.4,"Cauê Carvalho","Cascavel","assinei, é a minha vez"],[12687.2,"Jardel Nascimento","Itajaí","é a minha vez"],[12688.0,"Joaquim Paiva","Boa Vista","minha vez"],[12693.2,"Jucelino Falcão","Luziânia","assinei, é a minha vez"],[12726.9,"Damião Mendes","Pau dos Ferros","vou mandar a 19 hoje e parar"],[12737.5,"Bento Dias","Gramado","nunca mais espero três dias sem pensar no porquê"],[12743.0,"Cristóvão Rezende","Lisboa","isso é muito real"],[12748.4,"Teodoro Andrade","Garça","obrigado pela aula, Carol"],[12754.7,"Ademir Andrade","Itaúna","pessoa, momento, histórico. vou colar na geladeira"],[12770.3,"Valdemar Pereira","Olinda","aula top"],[12770.8,"Ivo Ribeiro","Barreiras","obrigado pela aula"],[12771.7,"Gilson Macedo","Imperatriz","muito obrigado"],[12772.8,"Cristóvão Miranda","Juiz de Fora","obrigado, Carol"],[12773.4,"Nélio Santana","Cascavel","muito obrigado"],[12774.9,"Otaviano Medeiros","Juazeiro do Norte","aula top"],[12776.1,"Jackson Guimarães","Apucarana","obrigado pela aula"],[12777.1,"Haroldo Leite","Uberlândia","muito obrigado"],[12780.0,"Marcílio Martins","Macapá","muito obrigado"],[12785.4,"Ivo Xavier","João Pessoa","valeu demais"],[12785.7,"Alcides Lima","Parnaíba","obrigado!"],[12788.4,"José Guimarães","Três Lagoas","obrigado pela aula"],[12789.3,"Moacir Lopes","Limeira","valeu demais"],[12789.6,"Ivo Carvalho","Bagé","obrigado!"],[12793.0,"Odair Prado","Uberlândia","valeu demais"],[12793.6,"Nathan Ramos","Guarapuava","aula top"],[12800.9,"Haroldo Medeiros","Londrina","valeu demais"],[12804.6,"Jeremias Ramos","Porto","obrigado!"],[12804.7,"Haroldo Santana","Presidente Prudente","obrigado!"],[12805.1,"Bernardo Nunes","Montes Claros","aula top"],[12858.6,"Joelson Ferreira","Parintins","sou eu"]];
+var COMPRAS = [[11328.1,"Nélio Bastos","Porto"],[11360.0,"Zacarias Carvalho","Itumbiara"],[11396.5,"Ângelo Oliveira","Lages"],[11415.0,"Haroldo Matos","São Luís"],[11437.3,"Jaime Rodrigues","Campina Grande"],[11453.9,"Célio Santos","Ponta Porã"],[11466.6,"Amaral Bastos","São Paulo"],[11496.2,"Lázaro Cunha","Duque de Caxias"],[11513.3,"Jaime Monteiro","Foz do Iguaçu"],[11540.9,"Fernão Oliveira","Catalão"],[11556.7,"Isaac Oliveira","João Pessoa"],[11585.0,"Armando Coelho","Miami"],[11603.2,"Nicolas Pires","Cuiabá"],[11634.0,"Vicente Aguiar","Parnaíba"],[11648.7,"Davidson Macedo","Catalão"],[11670.1,"Otaviano Santos","Santo Ângelo"],[11689.4,"Valdemar Peixoto","Poços de Caldas"],[11715.2,"Yuri Peixoto","Mogi das Cruzes"],[11748.2,"Edilson Dias","Canoas"],[11770.4,"Moacir Cavalcanti","Cuiabá"],[11792.9,"Aldo Silva","Limeira"],[11834.0,"Sidney Ribeiro","Canoas"],[11858.4,"Augusto Pereira","Guarulhos"],[11875.7,"Erasmo Fonseca","Caxias do Sul"],[11891.8,"Expedito Cunha","Quixadá"],[11910.1,"Horácio Medeiros","Bebedouro"],[11934.3,"Jurandir Fernandes","Paracatu"],[11948.5,"Laércio Vieira","Votuporanga"],[11961.5,"Orlando Martins","Unaí"],[11980.8,"Cristóvão Tavares","Anápolis"],[12014.4,"Ronaldo Batista","Parnaíba"],[12046.8,"Firmino Dias","Garanhuns"],[12068.6,"Josimar Silva","Novo Hamburgo"],[12095.9,"Rafael Barbosa","Londres"],[12125.3,"Cleiton Viana","Maringá"],[12163.7,"Olavo Macedo","Taubaté"],[12191.8,"Jeremias Prado","Ribeirão Preto"],[12229.1,"Leonel Correia","Catalão"],[12270.7,"Ariel Torres","Caxias do Sul"],[12300.6,"Maximiliano Rocha","Formosa"],[12323.0,"Sidney Peixoto","Santos"],[12351.5,"André Barros","Londrina"],[12372.9,"Armando Falcão","Rondonópolis"],[12411.8,"Armando Guimarães","Imperatriz"],[12451.7,"Gustavo Sampaio","Porto Alegre"],[12477.6,"Milton Sampaio","Bagé"],[12501.7,"Moacir Peixoto","Palmas"],[12526.1,"Tiago Araújo","Porto"],[12552.4,"Fernão Monteiro","Feira de Santana"],[12592.0,"Miguel Bastos","Joinville"],[12625.9,"Otoniel Teixeira","Serra"],[12647.1,"Plínio Cavalcanti","Jacarezinho"],[12666.6,"Thales Xavier","Itu"],[12684.6,"Jucelino Falcão","Luziânia"],[12719.2,"Davidson Aguiar","Uberaba"],[12742.3,"Silvano Machado","Orlando"],[12766.1,"Gilson Almeida","São José dos Campos"],[12791.2,"Denilson Nascimento","Boa Vista"],[12825.1,"Lázaro Cardoso","Campinas"]];   // [segundos do vídeo, nome, cidade]
+
+(function(){
+  "use strict";
+  var $ = function(id){ return document.getElementById(id); };
+  var params = new URLSearchParams(location.search);
+
+  function seg(txt){
+    var p = String(txt).trim().split(":").map(Number);
+    if (p.some(isNaN)) return Infinity;
+    return p.length === 3 ? p[0]*3600 + p[1]*60 + p[2] : p.length === 2 ? p[0]*60 + p[1] : p[0];
+  }
+  function relogio(t){
+    t = Math.max(0, Math.floor(t));
+    var h = Math.floor(t/3600), m = Math.floor(t%3600/60), s = t%60;
+    return (h ? h + ":" + String(m).padStart(2,"0") : m) + ":" + String(s).padStart(2,"0");
+  }
+  var PITCH = seg(CONFIG.PITCH_DELAY);
+
+  function linkCta(){
+    try {
+      var u = new URL(CONFIG.CTA_URL, location.href);
+      params.forEach(function(v, k){ if (k !== "calibrar" && k !== "t" && !u.searchParams.has(k)) u.searchParams.set(k, v); });
+      // checkout da Hotmart já preenchido com o que a pessoa digitou na entrada
+      if (lead){
+        var fone = String(lead.whatsapp || "").replace(/\D/g, "").replace(/^55/, "");
+        if (lead.nome) u.searchParams.set("name", lead.nome);
+        if (lead.email) u.searchParams.set("email", lead.email);
+        if (fone.length >= 10){ u.searchParams.set("phoneac", fone.slice(0, 2)); u.searchParams.set("phonenumber", fone.slice(2)); }
+      }
+      return u.toString();
+    } catch(e){ return CONFIG.CTA_URL; }
+  }
+  $("ctaBotao").textContent = CONFIG.CTA_TEXTO;
+  $("ofertaBotao").textContent = CONFIG.CTA_TEXTO;
+  $("ctaTitulo").textContent = CONFIG.CTA_TITULO;
+
+  /* ---------- barra de vagas ---------- */
+  setTimeout(function(){ $("vagas").style.width = "98%"; }, 400);
+
+  /* ---------- lead ---------- */
+  var lead = null;
+  function lerSalvo(){ try { return JSON.parse(localStorage.getItem("wc_lead") || "null"); } catch(e){ return null; } }
+  function salvar(l){ try { localStorage.setItem("wc_lead", JSON.stringify(l)); } catch(e){} }
+  /* ---------- registro no Supabase ---------- */
+  var webinarId = null;
+  function rpc(nome, corpo, manter){
+    return fetch(CONFIG.SUPABASE_URL + "/rest/v1/rpc/" + nome, {
+      method: "POST", keepalive: !!manter,
+      headers: { "Content-Type": "application/json", apikey: CONFIG.SUPABASE_KEY, Authorization: "Bearer " + CONFIG.SUPABASE_KEY },
+      body: JSON.stringify(corpo)
+    });
+  }
+  function enviarLead(l){
+    if (!CONFIG.SUPABASE_URL || !CONFIG.SUPABASE_KEY) return;
+    rpc("webinar_registrar", { p_nome: l.nome, p_email: l.email, p_whatsapp: l.whatsapp, p_cidade: l.cidade, p_pagina: location.href.slice(0, 500) })
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(id){ if (typeof id === "string") webinarId = id; })
+      .catch(function(){ console.error("Erro ao registrar a entrada no webinar."); });  // sem os dados da pessoa no console
+  }
+  // "ainda estou aqui": a cada 30 s com o vídeo tocando, e ao sair ou esconder a aba
+  function sinal(saindo){
+    if (!webinarId) return;
+    if (!saindo && video && !usandoRelogio && video.paused) return;
+    try { rpc("webinar_sinal", { p_id: webinarId, p_segundos: Math.max(0, Math.floor(agora())) }, true).catch(function(){}); } catch(e){}
+  }
+  function iniciarSinal(){
+    setInterval(function(){ sinal(false); }, 30000);
+    addEventListener("pagehide", function(){ sinal(true); });
+    document.addEventListener("visibilitychange", function(){ if (document.visibilityState === "hidden") sinal(true); });
+  }
+
+  var salvo = lerSalvo();
+  if (salvo){ $("fNome").value = salvo.nome || ""; $("fEmail").value = salvo.email || ""; $("fZap").value = salvo.whatsapp || ""; $("fCidade").value = salvo.cidade || ""; }
+  $("fZap").addEventListener("input", function(){
+    var d = this.value.replace(/\D/g, "").slice(0, 11), r = d;
+    if (d.length > 2) r = "(" + d.slice(0,2) + ") " + d.slice(2);
+    if (d.length > 7) r = "(" + d.slice(0,2) + ") " + d.slice(2, d.length - 4) + "-" + d.slice(-4);
+    this.value = r;
+  });
+  function marca(id, ok){ $(id).closest(".campo").classList.toggle("erro", !ok); return ok; }
+  $("cadastro").addEventListener("submit", function(e){
+    e.preventDefault();
+    var nome = $("fNome").value.trim().replace(/\s+/g, " ");
+    var email = $("fEmail").value.trim();
+    var zap = $("fZap").value.replace(/\D/g, "");
+    var cidade = $("fCidade").value.trim();
+    var ok = [
+      marca("fNome", nome.split(" ").length >= 2 && nome.length >= 5),
+      marca("fEmail", /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)),
+      marca("fZap", zap.length >= 10 && zap.length <= 11),
+      marca("fCidade", cidade.length >= 2)
+    ].every(Boolean);
+    if (!ok){ var p = document.querySelector(".campo.erro input"); if (p) p.focus(); return; }
+    lead = { nome: nome, email: email, whatsapp: "55" + zap, cidade: cidade };
+    salvar({ nome: nome, email: email, whatsapp: $("fZap").value, cidade: cidade });
+    enviarLead(lead);
+    iniciarSinal();
+    $("entrada").classList.add("oculto");
+    $("salaWrap").classList.remove("oculto");
+    iniciar();
+  });
+
+  /* ---------- abas ---------- */
+  function abrirAba(nome){
+    document.querySelectorAll("#abas button").forEach(function(b){ b.classList.toggle("ativa", b.dataset.aba === nome); });
+    document.querySelectorAll(".aba-conteudo").forEach(function(c){ c.classList.toggle("ativa", c.dataset.conteudo === nome); });
+    if (nome === "chat") lista.scrollTop = lista.scrollHeight;
+    if (nome === "oferta"){ var p = document.querySelector("#abaOferta .ponto"); if (p) p.remove(); }
+  }
+  $("abas").addEventListener("click", function(e){ var b = e.target.closest("button"); if (b) abrirAba(b.dataset.aba); });
+
+  /* ---------- player VTurb ---------- */
+  var video = null, inicioRelogio = 0, baseRelogio = 0, usandoRelogio = false, ajuste = 0;
+  function acharVideo(raiz){
+    var v = raiz.querySelector("video");
+    if (v) return v;
+    var tudo = raiz.querySelectorAll("*");
+    for (var i = 0; i < tudo.length; i++){
+      if (tudo[i].shadowRoot){ v = acharVideo(tudo[i].shadowRoot); if (v) return v; }
+    }
+    return null;
+  }
+  function tocar(){
+    try {
+      var sp = window.smartplayer && window.smartplayer.instances && window.smartplayer.instances[0];
+      if (sp && typeof sp.play === "function") sp.play();
+    } catch(e){}
+    if (video){
+      // o autoplay mudo do VTurb roda atrás da tela de entrada; recomeça do zero, mas respeita quem voltou no meio
+      if (video.currentTime < 60 && !params.has("t")) video.currentTime = 0;
+      video.muted = false;
+      var pr = video.play();
+      if (pr && pr.catch) pr.catch(function(){ video.muted = true; video.play().catch(function(){}); });
+    }
+  }
+
+  function iniciar(){
+    var inicioT = params.has("t") ? seg(params.get("t")) : 0;
+    if (!isFinite(inicioT)) inicioT = 0;
+    baseRelogio = inicioT; inicioRelogio = performance.now();
+    video = acharVideo($("video"));
+    if (video){ if (inicioT) video.currentTime = inicioT; tocar(); }
+    else {
+      usandoRelogio = true;
+      var tentativas = 0;
+      var busca = setInterval(function(){
+        video = acharVideo($("video"));
+        if (video){ clearInterval(busca); if (inicioT) video.currentTime = tempoRelogio(); tocar(); }
+        else if (++tentativas > 120){ clearInterval(busca); }
+      }, 250);
+    }
+    rodar();
+  }
+  function tempoRelogio(){ return baseRelogio + (performance.now() - inicioRelogio) / 1000; }
+  function agora(){
+    if (video && !(usandoRelogio && video.currentTime === 0 && video.paused)){ usandoRelogio = false; return video.currentTime + ajuste; }
+    return tempoRelogio() + ajuste;
+  }
+
+  /* ---------- chat ---------- */
+  var lista = $("lista"), MAX_DOM = 220, cursor = 0, ultimoT = -1;
+  var CORES = ["#4F6BED","#E07A3F","#2FA37C","#B556C9","#D9475B","#3A9BC1","#8C6CE0","#C99A2E","#5B8C3A","#E05FA0"];
+  function cor(n){ var h = 0; for (var i = 0; i < n.length; i++) h = (h * 31 + n.charCodeAt(i)) >>> 0; return CORES[h % CORES.length]; }
+  function iniciais(n){ var p = n.split(" "); return (p[0].charAt(0) + (p[1] ? p[1].charAt(0) : "")).toUpperCase(); }
+  function noFim(){ return lista.scrollHeight - lista.scrollTop - lista.clientHeight < 60; }
+  function criar(nome, cidade, texto, eu){
+    var el = document.createElement("div"); el.className = "msg" + (eu ? " eu" : "");
+    var av = document.createElement("div"); av.className = "av"; av.style.background = eu ? "#30BB40" : cor(nome); av.textContent = iniciais(nome);
+    var corpo = document.createElement("div"); corpo.className = "corpo";
+    var quem = document.createElement("span"); quem.className = "quem"; quem.textContent = nome;
+    corpo.appendChild(quem);
+    if (eu){ var s = document.createElement("span"); s.className = "selo-eu"; s.textContent = "você"; corpo.appendChild(s); }
+    if (cidade){ var c = document.createElement("span"); c.className = "cid"; c.textContent = " · " + cidade; corpo.appendChild(c); }
+    var tx = document.createElement("span"); tx.className = "txt"; tx.textContent = texto;
+    corpo.appendChild(tx);
+    el.appendChild(av); el.appendChild(corpo);
+    return el;
+  }
+  function adicionar(el, forcarRolagem){
+    var estavaNoFim = noFim();
+    lista.appendChild(el);
+    while (lista.children.length > MAX_DOM) lista.removeChild(lista.firstChild);
+    if (estavaNoFim || forcarRolagem){ lista.scrollTop = lista.scrollHeight; $("novas").classList.remove("on"); }
+    else $("novas").classList.add("on");
+  }
+  lista.addEventListener("scroll", function(){ if (noFim()) $("novas").classList.remove("on"); });
+  $("novas").addEventListener("click", function(){ lista.scrollTop = lista.scrollHeight; this.classList.remove("on"); });
+
+  function reconstruir(t){
+    lista.innerHTML = "";
+    var lim = t + CONFIG.LEAD_SEGUNDOS;
+    cursor = 0;
+    while (cursor < COMENTARIOS.length && COMENTARIOS[cursor][0] <= lim) cursor++;
+    for (var i = Math.max(0, cursor - 40); i < cursor; i++){
+      if (COMENTARIOS[i][0] >= lim - 90) lista.appendChild(criar(COMENTARIOS[i][1], COMENTARIOS[i][2], COMENTARIOS[i][3]));
+    }
+    lista.scrollTop = lista.scrollHeight;
+  }
+
+  /* comentário do visitante */
+  var ultimos = [];
+  $("form").addEventListener("submit", function(e){
+    e.preventDefault();
+    var campo = $("campoMsg"), texto = campo.value.trim();
+    $("emojis").classList.remove("on");
+    if (!texto || !lead) return;
+    var t = Date.now();
+    ultimos = ultimos.filter(function(x){ return t - x < 20000; });
+    if (ultimos.length >= 4){ campo.value = ""; campo.placeholder = "Aguarde alguns segundos..."; return; }
+    ultimos.push(t);
+    adicionar(criar(lead.nome, lead.cidade, texto, true), true);
+    campo.value = ""; campo.placeholder = "Envie uma mensagem...";
+  });
+  $("btnEmoji").addEventListener("click", function(){ $("emojis").classList.toggle("on"); });
+  $("emojis").addEventListener("click", function(e){
+    if (e.target.tagName !== "BUTTON") return;
+    var c = $("campoMsg"); c.value += e.target.textContent; c.focus();
+  });
+
+  /* ---------- pitch ---------- */
+  var pitchOn = false;
+  function mostrarPitch(){
+    if (pitchOn) return; pitchOn = true;
+    var l = linkCta();
+    ["ctaBotao","fixadoBotao","ofertaBotao"].forEach(function(id){ $(id).href = l; });
+    $("ofertaVideo").classList.add("on"); $("fixado").classList.add("on");
+    $("abaOferta").classList.remove("oculto"); $("abas").style.setProperty("--n", 2);
+    abrirAba("oferta");                                          // a aba Oferta abre sozinha quando o pitch chega
+  }
+
+  /* ---------- compras e vagas ---------- */
+  // só contam as compras depois do pitch; as vagas saem direto do tempo do vídeo, então sobrevivem a pulos e recargas
+  var COMPRAS_VALIDAS = COMPRAS.filter(function(c){ return c[0] >= PITCH; });
+  var cursorCompra = -1, vagasMostradas = null, toastTimer = null;
+  function comprasAte(t){ var n = 0; while (n < COMPRAS_VALIDAS.length && COMPRAS_VALIDAS[n][0] <= t) n++; return n; }
+  function atualizarVagas(n){
+    var v = Math.max(CONFIG.VAGAS_MINIMO, CONFIG.VAGAS_INICIAIS - n);
+    if (v === vagasMostradas) return;
+    var animar = vagasMostradas !== null;
+    vagasMostradas = v;
+    document.querySelectorAll(".js-vagas").forEach(function(el){
+      el.textContent = v;
+      if (animar){ el.classList.remove("bate"); void el.offsetWidth; el.classList.add("bate"); }
+    });
+    var pct = Math.max(4, v / CONFIG.VAGAS_INICIAIS * 100) + "%";
+    document.querySelectorAll(".js-vagas-barra").forEach(function(el){ el.style.width = pct; });
+  }
+  function notificar(c){
+    if (!CONFIG.NOTIFICACOES) return;
+    $("toastNome").textContent = c[1] + ", de " + c[2];
+    $("toastTxt").textContent = CONFIG.TEXTO_COMPRA;
+    $("toast").classList.add("on");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ $("toast").classList.remove("on"); }, 5000);
+  }
+  function compras(t, pulou){
+    var n = comprasAte(t);
+    if (cursorCompra < 0 || pulou) cursorCompra = n;            // ao entrar ou pular, não dispara as antigas
+    else if (n > cursorCompra){ notificar(COMPRAS_VALIDAS[n - 1]); cursorCompra = n; }
+    atualizarVagas(n);
+  }
+
+  /* ---------- contador de pessoas ---------- */
+  var pessoas = 0;
+  function contar(t){
+    var alvo = t < 300 ? 4812 + t * 1.3 : 5203 + Math.sin(t / 97) * 38 + Math.sin(t / 23) * 11;
+    pessoas = pessoas ? pessoas + (alvo - pessoas) * 0.15 + (Math.random() - 0.5) * 6 : alvo;
+    $("contador").textContent = Math.round(pessoas).toLocaleString("pt-BR");
+  }
+
+  /* ---------- laço principal ---------- */
+  var tick = 0;
+  function rodar(){
+    setInterval(function(){
+      var t = agora();
+      var pulou = ultimoT >= 0 && (t < ultimoT - 2 || t > ultimoT + 30);
+      if (pulou) reconstruir(t);
+      ultimoT = t;
+      compras(t, pulou);
+      var lim = t + CONFIG.LEAD_SEGUNDOS;
+      while (cursor < COMENTARIOS.length && COMENTARIOS[cursor][0] <= lim){
+        var c = COMENTARIOS[cursor++];
+        adicionar(criar(c[1], c[2], c[3]));
+      }
+      if (t >= PITCH) mostrarPitch();
+      if (++tick % 8 === 1) contar(t);
+      if (calibrando) painel(t);
+    }, 250);
+  }
+
+  /* ---------- calibração ---------- */
+  var calibrando = params.get("calibrar") === "1";
+  function painel(t){
+    var prox = COMENTARIOS[cursor];
+    $("calibInfo").innerHTML =
+      "tempo do vídeo: <b>" + relogio(t) + "</b> (" + (video && !usandoRelogio ? "player" : "cronômetro") + ")<br>" +
+      "ajuste: " + ajuste.toFixed(1) + " s · antecedência: " + CONFIG.LEAD_SEGUNDOS + " s<br>" +
+      "pitch em: " + relogio(PITCH) + (pitchOn ? " (visível)" : "") + "<br>" +
+      "próximo: " + (prox ? relogio(prox[0]) + " " + prox[1] + " · " + prox[3] : "fim");
+  }
+  if (calibrando){
+    $("calib").innerHTML = '<div id="calibInfo">aguardando a entrada na sala</div>' +
+      '<button data-a="-5">-5s</button><button data-a="-1">-1s</button><button data-a="1">+1s</button><button data-a="5">+5s</button>' +
+      ' <input id="pular" placeholder="1:23:45"><button data-p="1">ir</button>';
+    $("calib").classList.add("on");
+    $("calib").addEventListener("click", function(e){
+      var b = e.target;
+      if (b.dataset.a){ ajuste += Number(b.dataset.a); }
+      if (b.dataset.p){
+        var alvo = seg($("pular").value);
+        if (!isFinite(alvo)) return;
+        if (video && !usandoRelogio) video.currentTime = alvo;
+        else { baseRelogio = alvo - ajuste; inicioRelogio = performance.now(); }
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
